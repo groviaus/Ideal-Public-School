@@ -1,21 +1,27 @@
 "use client"
 
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Menu, X, GraduationCap } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
-    { name: "Academics", href: "#academics" },
-    { name: "Admissions", href: "#admissions" },
-    { name: "Facilities", href: "#facilities" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/about" },
+    { name: "Academics", href: "/academics" },
+    { name: "Admissions", href: "/admissions" },
+    { name: "Facilities", href: "/facilities" },
+    { name: "Faculty", href: "/faculty" },
+    { name: "Student Life", href: "/student-life" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "News", href: "/news" },
+    { name: "Contact", href: "/contact" },
   ]
 
   return (
@@ -32,18 +38,28 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button size="sm" className="ml-4">
-              Apply Now
-            </Button>
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href))
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={cn(
+                    "text-sm font-medium transition-colors",
+                    isActive
+                      ? "text-primary font-semibold"
+                      : "text-muted-foreground hover:text-primary"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              )
+            })}
+            <Link href="/admissions">
+              <Button size="sm" className="ml-4">
+                Apply Now
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -63,18 +79,28 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden border-t bg-background">
           <div className="container mx-auto space-y-1 px-4 py-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href))
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={cn(
+                    "block rounded-md px-3 py-2 text-base font-medium transition-colors",
+                    isActive
+                      ? "bg-accent text-accent-foreground font-semibold"
+                      : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                  )}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
+            })}
             <div className="mt-4 px-3">
-              <Button className="w-full">Apply Now</Button>
+              <Link href="/admissions">
+                <Button className="w-full">Apply Now</Button>
+              </Link>
             </div>
           </div>
         </div>

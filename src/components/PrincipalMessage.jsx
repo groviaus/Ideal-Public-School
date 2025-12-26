@@ -1,3 +1,4 @@
+import Image from "next/image"
 import SectionWrapper from "@/components/SectionWrapper"
 import { Quote } from "lucide-react"
 
@@ -7,11 +8,15 @@ const PrincipalMessage = () => {
        <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           <div className="w-full md:w-1/3">
              <div className="aspect-[3/4] rounded-2xl bg-slate-200 overflow-hidden relative shadow-xl">
-               <div className="absolute inset-0 flex items-center justify-center text-slate-400">
-                 Principal Image Placement
-               </div>
+               <Image
+                 src="https://source.unsplash.com/600x800/?professional,portrait,educator"
+                 alt="Dr. Sarah Johnson, Principal of Ideal Public School"
+                 fill
+                 className="object-cover"
+                 unoptimized
+               />
                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent text-white">
-                  <p className="font-bold text-lg">Dr. Jane Doe</p>
+                  <p className="font-bold text-lg">Dr. Sarah Johnson</p>
                   <p className="text-sm opacity-90">Principal, Ideal Public School</p>
                </div>
              </div>

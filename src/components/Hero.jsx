@@ -1,9 +1,21 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Download } from "lucide-react"
 
 const Hero = () => {
   return (
     <section className="relative overflow-hidden w-full py-20 md:py-32 lg:py-40 bg-gradient-to-br from-blue-50 via-white to-green-50">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://source.unsplash.com/1600x900/?school,campus,building"
+          alt="Ideal Public School campus with modern buildings and green surroundings"
+          fill
+          className="object-cover opacity-10"
+          priority
+          unoptimized
+        />
+      </div>
       <div className="container px-4 md:px-6 mx-auto relative z-10">
         <div className="flex flex-col items-center space-y-8 text-center">
           <div className="space-y-4 max-w-4xl">

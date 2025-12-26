@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import SectionWrapper from "@/components/SectionWrapper"
@@ -67,11 +68,13 @@ export default function Home() {
             </Button>
           </div>
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl bg-slate-100 border border-slate-200">
-             {/* Placeholder for About Image */}
-             <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground bg-slate-50">
-                <Users className="h-12 w-12 opacity-20 mb-2" />
-                <span className="text-sm font-medium opacity-40">School Building / Students Image</span>
-             </div>
+             <Image
+               src="https://source.unsplash.com/800x600/?students,classroom,learning"
+               alt="Students learning in modern classroom at Ideal Public School"
+               fill
+               className="object-cover"
+               unoptimized
+             />
           </div>
         </div>
       </SectionWrapper>

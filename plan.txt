@@ -1,0 +1,434 @@
+Role
+Act as a Senior Frontend Engineer & UI/UX Designer.
+
+Objective
+Add relevant, high-quality images from Unsplash to all pages (homepage + internal pages) of the school website. Test each Unsplash URL with curl before using it in the code to ensure the image loads correctly.
+​
+
+Tech Stack
+Next.js 14+ (App Router)
+
+JSX (NOT TSX)
+
+Tailwind CSS
+
+shadcn/ui components
+
+lucide-react icons
+
+Unsplash Source API (no API key required)
+​
+
+📋 STEP 1: Update Next.js Configuration
+File: next.config.js
+
+Add Unsplash domains to the images configuration:
+​
+
+js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    formats: ["image/avif", "image/webp"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+      },
+    ],
+  },
+}
+
+module.exports = nextConfig
+📋 STEP 2: Create Image Testing Script
+File: test-unsplash-images.sh
+
+Create a bash script to test all Unsplash image URLs before using them:
+
+bash
+#!/bin/bash
+
+echo "Testing Unsplash Images for School Website..."
+echo "=============================================="
+
+# Homepage Images
+echo "HOMEPAGE IMAGES:"
+echo -n "Hero Campus: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/1600x900/?school,campus,building" && echo " ✓"
+
+echo -n "About Students: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/1200x800/?students,classroom,learning" && echo " ✓"
+
+echo -n "Library: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x500/?library,books,reading" && echo " ✓"
+
+echo -n "Science Lab: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x500/?science,laboratory,experiment" && echo " ✓"
+
+echo -n "Sports Ground: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x500/?sports,playground,athletics" && echo " ✓"
+
+echo -n "School Bus: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x500/?school,bus,yellow" && echo " ✓"
+
+echo -n "Medical Room: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x500/?medical,clinic,healthcare" && echo " ✓"
+
+echo -n "Principal Portrait: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/600x800/?professional,portrait,educator" && echo " ✓"
+
+echo -n "Sports Event: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?sports,event,competition" && echo " ✓"
+
+echo -n "Science Exhibition: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?science,exhibition,fair" && echo " ✓"
+
+echo -n "Cultural Performance: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?cultural,performance,dance" && echo " ✓"
+
+# About Page Images
+echo ""
+echo "ABOUT PAGE IMAGES:"
+echo -n "School History: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/1200x800/?school,history,education" && echo " ✓"
+
+echo -n "Leadership Portrait: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/400x400/?professional,educator,portrait" && echo " ✓"
+
+# Academics Page Images
+echo ""
+echo "ACADEMICS PAGE IMAGES:"
+echo -n "Pre-Primary: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?kindergarten,children,learning" && echo " ✓"
+
+echo -n "Primary: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?primary,school,children" && echo " ✓"
+
+echo -n "Secondary: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?teenagers,students,classroom" && echo " ✓"
+
+echo -n "Senior Secondary: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?high,school,students" && echo " ✓"
+
+# Admissions Page Images
+echo ""
+echo "ADMISSIONS PAGE IMAGES:"
+echo -n "Admissions Family: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/1200x800/?family,school,admission" && echo " ✓"
+
+# Facilities Page Images
+echo ""
+echo "FACILITIES PAGE IMAGES:"
+echo -n "Auditorium: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?auditorium,hall,stage" && echo " ✓"
+
+echo -n "Cafeteria: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?cafeteria,canteen,dining" && echo " ✓"
+
+echo -n "Computer Lab: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?computer,lab,technology" && echo " ✓"
+
+# Faculty Page Images
+echo ""
+echo "FACULTY PAGE IMAGES:"
+echo -n "Faculty Portrait: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/300x300/?teacher,educator,professional" && echo " ✓"
+
+# Student Life Page Images
+echo ""
+echo "STUDENT LIFE PAGE IMAGES:"
+echo -n "Morning Assembly: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?students,assembly,morning" && echo " ✓"
+
+echo -n "Sports Club: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?sports,club,activity" && echo " ✓"
+
+echo -n "Music Dance: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?music,dance,students" && echo " ✓"
+
+echo -n "Art Craft: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/800x600/?art,craft,creative" && echo " ✓"
+
+# Contact Page Images
+echo ""
+echo "CONTACT PAGE IMAGES:"
+echo -n "School Entrance: "
+curl -s -o /dev/null -w "%{http_code}" "https://source.unsplash.com/1200x800/?school,entrance,building" && echo " ✓"
+
+echo ""
+echo "=============================================="
+echo "All images tested successfully!"
+echo "Run this script first, then proceed with implementation."
+Make it executable and run:
+
+bash
+chmod +x test-unsplash-images.sh
+./test-unsplash-images.sh
+📋 STEP 3: Image Implementation Rules
+General Guidelines
+​
+Always use next/image component:
+
+jsx
+import Image from "next/image"
+Unsplash Source URL Pattern:
+
+text
+https://source.unsplash.com/{width}x{height}/?{keywords}
+Always add unoptimized prop for Unsplash images:
+
+jsx
+<Image src="..." alt="..." width={800} height={600} unoptimized />
+Use descriptive alt text (school context, not generic)
+
+Maintain aspect ratios:
+
+Hero: aspect-[16/9] or 1600x900
+
+Cards: aspect-[4/3] or 800x600
+
+Portraits: aspect-[3/4] or 600x800
+
+Circular: 400x400
+
+Consistent styling:
+
+Rounded corners: rounded-2xl, rounded-3xl
+
+Object fit: object-cover
+
+Hover effects: group-hover:scale-105
+
+📋 STEP 4: Where to Add Images
+HOMEPAGE (/app/page.jsx)
+Hero Section
+Replace the placeholder div with:
+
+jsx
+<Image
+  src="https://source.unsplash.com/1600x900/?school,campus,building"
+  alt="Aerial view of Green Valley International School campus"
+  width={1600}
+  height={900}
+  className="h-full w-full object-cover"
+  priority
+  unoptimized
+/>
+About Section
+Add two images in grid:
+
+jsx
+<Image
+  src="https://source.unsplash.com/800x600/?school,architecture,building"
+  alt="School building exterior"
+  width={800}
+  height={600}
+  className="rounded-2xl object-cover"
+  unoptimized
+/>
+<Image
+  src="https://source.unsplash.com/800x600/?students,classroom,learning"
+  alt="Students in classroom"
+  width={800}
+  height={600}
+  className="rounded-2xl object-cover"
+  unoptimized
+/>
+Facilities Cards (Homepage)
+Add images to each facility card:
+
+Library: https://source.unsplash.com/800x500/?library,books,reading
+
+Labs: https://source.unsplash.com/800x500/?science,laboratory,experiment
+
+Sports: https://source.unsplash.com/800x500/?sports,playground,athletics
+
+Transport: https://source.unsplash.com/800x500/?school,bus,yellow
+
+Medical: https://source.unsplash.com/800x500/?medical,clinic,healthcare
+
+Principal's Message
+Replace placeholder with:
+
+jsx
+<Image
+  src="https://source.unsplash.com/600x800/?professional,portrait,educator"
+  alt="Dr. Ananya Mehra, Principal"
+  width={600}
+  height={800}
+  className="h-full w-full object-cover"
+  unoptimized
+/>
+Gallery Section (Homepage)
+Replace all gallery placeholder divs with Image components using these URLs:
+
+Sports Day: https://source.unsplash.com/800x600/?sports,event,competition
+
+Science Exhibition: https://source.unsplash.com/800x600/?science,exhibition,fair
+
+Cultural Fest: https://source.unsplash.com/800x600/?cultural,performance,dance
+
+Art Showcase: https://source.unsplash.com/800x600/?art,painting,exhibition
+
+Music Concert: https://source.unsplash.com/800x600/?music,concert,performance
+
+Field Trip: https://source.unsplash.com/800x600/?field,trip,education
+
+ABOUT PAGE (/app/about/page.jsx)
+School History Section
+jsx
+<Image
+  src="https://source.unsplash.com/1200x800/?school,history,education"
+  alt="School journey since 2005"
+  width={1200}
+  height={800}
+  className="rounded-2xl object-cover"
+  unoptimized
+/>
+Leadership Team
+Replace each leader placeholder with circular portraits:
+
+jsx
+<Image
+  src="https://source.unsplash.com/400x400/?professional,educator,portrait"
+  alt="Principal portrait"
+  width={400}
+  height={400}
+  className="h-32 w-32 rounded-full object-cover"
+  unoptimized
+/>
+ACADEMICS PAGE (/app/academics/page.jsx)
+Add grade-wise images:
+
+Pre-Primary: https://source.unsplash.com/800x600/?kindergarten,children,learning,play
+
+Primary: https://source.unsplash.com/800x600/?primary,school,children,classroom
+
+Secondary: https://source.unsplash.com/800x600/?teenagers,students,classroom,learning
+
+Senior Secondary: https://source.unsplash.com/800x600/?high,school,students,study
+
+ADMISSIONS PAGE (/app/admissions/page.jsx)
+Add admission counseling image:
+
+jsx
+<Image
+  src="https://source.unsplash.com/1200x800/?family,school,admission,education"
+  alt="Parents with child during admissions"
+  width={1200}
+  height={800}
+  className="rounded-2xl object-cover"
+  unoptimized
+/>
+FACILITIES PAGE (/app/facilities/page.jsx)
+Add detailed facility images:
+
+Auditorium: https://source.unsplash.com/800x600/?auditorium,hall,stage,performance
+
+Cafeteria: https://source.unsplash.com/800x600/?cafeteria,canteen,dining,food
+
+Computer Lab: https://source.unsplash.com/800x600/?computer,lab,technology,students
+
+(Use homepage facility URLs for others)
+
+FACULTY PAGE (/app/faculty/page.jsx)
+Replace all faculty placeholder images with:
+
+jsx
+<Image
+  src="https://source.unsplash.com/300x300/?teacher,educator,professional,portrait"
+  alt="Faculty member"
+  width={300}
+  height={300}
+  className="h-24 w-24 rounded-full object-cover"
+  unoptimized
+/>
+STUDENT LIFE PAGE (/app/student-life/page.jsx)
+Add activity images:
+
+Morning Assembly: https://source.unsplash.com/800x600/?students,assembly,morning,school
+
+Sports Club: https://source.unsplash.com/800x600/?sports,club,activity,students
+
+Music & Dance: https://source.unsplash.com/800x600/?music,dance,students,performance
+
+Art & Craft: https://source.unsplash.com/800x600/?art,craft,creative,students
+
+Debate: https://source.unsplash.com/800x600/?debate,students,competition
+
+GALLERY PAGE (/app/gallery/page.jsx)
+Replace all gallery grid items with Images using category-based URLs:
+
+Sports: https://source.unsplash.com/800x600/?sports,students,competition
+
+Cultural: https://source.unsplash.com/800x600/?cultural,performance,students
+
+Academic: https://source.unsplash.com/800x600/?science,project,students
+
+Events: https://source.unsplash.com/800x600/?school,event,celebration
+
+NEWS PAGE (/app/news/page.jsx)
+Add thumbnail images to news cards:
+
+jsx
+<Image
+  src="https://source.unsplash.com/600x400/?school,news,event"
+  alt="News thumbnail"
+  width={600}
+  height={400}
+  className="rounded-xl object-cover"
+  unoptimized
+/>
+CONTACT PAGE (/app/contact/page.jsx)
+Add school entrance image:
+
+jsx
+<Image
+  src="https://source.unsplash.com/1200x800/?school,entrance,building,front"
+  alt="Green Valley International School entrance"
+  width={1200}
+  height={800}
+  className="rounded-2xl object-cover"
+  unoptimized
+/>
+⚡ Implementation Instructions
+First, run the test script and verify all URLs return 200 status
+
+Update next.config.js to allow Unsplash domains
+
+Go through each page and replace placeholder divs with <Image /> components
+
+Import Image from "next/image" at the top of each component
+
+Use the exact Unsplash URLs provided above with correct dimensions
+
+Always add unoptimized prop to Unsplash images
+
+Write descriptive alt text for accessibility
+
+Maintain existing layout - don't change card structures, only replace content
+
+Test responsive behavior after adding images
+
+✅ Final Checklist
+ Test script created and run successfully
+
+ next.config.js updated with Unsplash domains
+
+ All homepage images replaced
+
+ All internal page images replaced
+
+ All images have meaningful alt text
+
+ All images use unoptimized prop
+
+ Responsive design maintained
+
+ No layout breaks
+
+ Images load correctly in browser
