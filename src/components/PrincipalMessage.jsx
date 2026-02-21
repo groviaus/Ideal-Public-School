@@ -9,7 +9,7 @@ const PrincipalMessage = () => {
           <div className="w-full md:w-1/3">
              <div className="aspect-[3/4] rounded-2xl bg-slate-200 overflow-hidden relative shadow-xl">
                <Image
-                 src="https://source.unsplash.com/600x800/?professional,portrait,educator"
+                 src="https://source.unsplash.com/600x800/?professional,portrait,education"
                  alt="Dr. Sarah Johnson, Principal of Ideal Public School"
                  fill
                  className="object-cover"
