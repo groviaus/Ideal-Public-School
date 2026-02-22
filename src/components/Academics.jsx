@@ -5,19 +5,19 @@ import { Book, GraduationCap, Microscope, Palette } from "lucide-react"
 const Academics = () => {
   const academicFeatures = [
     {
-      title: "Curriculum",
+      title: "CBSE Curriculum",
       icon: <Book className="h-10 w-10 text-blue-500 mb-2" />,
-      description: "We follow the CBSE curriculum with a focus on holistic development and conceptual understanding."
+      description: "We follow the CBSE board curriculum across 10 subjects with English & Hindi as medium of instruction."
     },
     {
-      title: "Classes Offered",
+      title: "Nursery – Class 8",
       icon: <GraduationCap className="h-10 w-10 text-green-500 mb-2" />,
-      description: "From Kindergarten to Senior Secondary (Grade XII) with Science, Commerce, and Humanities streams."
+      description: "Co-educational classes from Nursery through Class 8, building strong foundations for every child."
     },
     {
       title: "Innovative Methods",
       icon: <Microscope className="h-10 w-10 text-purple-500 mb-2" />,
-      description: "Smart classrooms, experiential learning, and project-based assessments for deeper engagement."
+      description: "Experiential learning, discussion-based learning, smart classes, and project-based learning for deeper engagement."
     },
     {
       title: "Co-Curricular",

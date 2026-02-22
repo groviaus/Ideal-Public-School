@@ -46,14 +46,17 @@ export default function AdmissionsPage() {
   ]
 
   const ageCriteria = [
-    { grade: "Nursery", minAge: "3 years", maxAge: "4 years", asOnDate: "2024" },
-    { grade: "LKG", minAge: "4 years", maxAge: "5 years", asOnDate: "2024" },
-    { grade: "UKG", minAge: "5 years", maxAge: "6 years", asOnDate: "2024" },
-    { grade: "Grade 1", minAge: "6 years", maxAge: "7 years", asOnDate: "2024" },
-    { grade: "Grade 2", minAge: "7 years", maxAge: "8 years", asOnDate: "2024" },
-    { grade: "Grade 3", minAge: "8 years", maxAge: "9 years", asOnDate: "2024" },
-    { grade: "Grade 4", minAge: "9 years", maxAge: "10 years", asOnDate: "2024" },
-    { grade: "Grade 5", minAge: "10 years", maxAge: "11 years", asOnDate: "2024" },
+    { grade: "Nursery", minAge: "3 years", maxAge: "4 years", asOnDate: "2025" },
+    { grade: "LKG", minAge: "4 years", maxAge: "5 years", asOnDate: "2025" },
+    { grade: "UKG", minAge: "5 years", maxAge: "6 years", asOnDate: "2025" },
+    { grade: "Class 1", minAge: "6 years", maxAge: "7 years", asOnDate: "2025" },
+    { grade: "Class 2", minAge: "7 years", maxAge: "8 years", asOnDate: "2025" },
+    { grade: "Class 3", minAge: "8 years", maxAge: "9 years", asOnDate: "2025" },
+    { grade: "Class 4", minAge: "9 years", maxAge: "10 years", asOnDate: "2025" },
+    { grade: "Class 5", minAge: "10 years", maxAge: "11 years", asOnDate: "2025" },
+    { grade: "Class 6", minAge: "11 years", maxAge: "12 years", asOnDate: "2025" },
+    { grade: "Class 7", minAge: "12 years", maxAge: "13 years", asOnDate: "2025" },
+    { grade: "Class 8", minAge: "13 years", maxAge: "14 years", asOnDate: "2025" },
   ]
 
   const documents = [
@@ -76,53 +79,39 @@ export default function AdmissionsPage() {
       totalAnnual: 54000,
     },
     {
-      grade: "Grade 1 - 5",
+      grade: "Class 1 - 5",
       admissionFee: 18000,
       annualFee: 15000,
       monthlyTuition: 4000,
       totalAnnual: 63000,
     },
     {
-      grade: "Grade 6 - 8",
+      grade: "Class 6 - 8",
       admissionFee: 20000,
       annualFee: 18000,
       monthlyTuition: 4500,
       totalAnnual: 72000,
     },
-    {
-      grade: "Grade 9 - 10",
-      admissionFee: 22000,
-      annualFee: 20000,
-      monthlyTuition: 5000,
-      totalAnnual: 80000,
-    },
-    {
-      grade: "Grade 11 - 12",
-      admissionFee: 25000,
-      annualFee: 22000,
-      monthlyTuition: 5500,
-      totalAnnual: 88000,
-    },
   ]
 
   const importantDates = [
     {
-      year: "2024",
+      year: "2025",
       title: "Admission Process Begins",
-      description: "Online registration opens for academic year 2024-25",
+      description: "Online registration opens for academic year 2025-26",
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Last Date for Registration",
       description: "Final date to submit admission applications",
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Interaction Sessions",
       description: "Scheduled interaction and assessment dates",
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Admission Confirmation",
       description: "Last date to confirm admission and pay fees",
     },
@@ -169,9 +158,9 @@ export default function AdmissionsPage() {
       
       <PageHero
         title="Admissions"
-        subtitle="Begin your journey with Ideal Public School. Admissions are now open for the academic year 2024-25."
+        subtitle="Begin your journey with Ideal Public School. Admissions are now open for the academic year 2025-26."
         breadcrumbItems={[{ label: "Admissions", href: "/admissions" }]}
-        badge="Admissions Open for 2024-25"
+        badge="Admissions Open for 2025-26"
       />
 
       <PageWrapper>
@@ -319,7 +308,7 @@ export default function AdmissionsPage() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="font-semibold text-slate-900">+1 234 567 890</p>
+                    <p className="font-semibold text-slate-900">+91 9934991694</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
@@ -328,7 +317,7 @@ export default function AdmissionsPage() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-semibold text-slate-900">admissions@idealschool.edu</p>
+                    <p className="font-semibold text-slate-900">idealpublichighschool2005@gmail.com</p>
                   </div>
                 </div>
               </div>

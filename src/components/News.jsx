@@ -22,7 +22,7 @@ const News = () => {
       date: "28 Jan, 2025",
       title: "Admission Open for 2025-26",
       category: "Admissions",
-      excerpt: "Online applications are now open for all grades from Nursery to Class IX."
+      excerpt: "Online applications are now open for all grades from Nursery to Class 8."
     }
   ]
 

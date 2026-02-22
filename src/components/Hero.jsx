@@ -20,14 +20,14 @@ const Hero = () => {
         <div className="flex flex-col items-center space-y-8 text-center">
           <div className="space-y-4 max-w-4xl">
             <div className="inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-800 mb-4">
-              Admissions Open for 2024-25
+              Admissions Open for 2025-26
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-slate-900">
               Where Learning Knows <br className="hidden sm:inline" />
               <span className="text-primary">No Bounds</span>
             </h1>
             <p className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl leading-relaxed">
-              Ideal Public School provides a world-class education that fosters critical thinking, creativity, and character development for tomorrow's leaders.
+              Through innovative and interactive approaches to education, we foster a vibrant culture of collaboration, curiosity, and shared knowledge — empowering every learner to grow, contribute, and thrive.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

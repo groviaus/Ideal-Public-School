@@ -31,14 +31,14 @@ export default function FacilitiesPage() {
     },
     {
       name: "Library & Reading Room",
-      description: "A well-stocked library with over 15,000 books, digital resources, and a quiet reading room for students to explore and learn.",
+      description: "A well-stocked library with books, journals, and digital resources for students and a quiet reading room.",
       image: "https://source.unsplash.com/800x500/?library,books,reading",
       features: [
-        "15,000+ books",
+        "Books and journals",
         "Digital library access",
         "Reading room",
         "Research facilities",
-        "Periodicals and journals",
+        "Periodicals",
       ],
     },
     {
@@ -49,7 +49,7 @@ export default function FacilitiesPage() {
         "Physics Lab",
         "Chemistry Lab",
         "Biology Lab",
-        "Computer Lab (4 labs)",
+        "Computer Lab",
         "Safety equipment",
       ],
     },
@@ -103,12 +103,12 @@ export default function FacilitiesPage() {
     },
     {
       name: "Transport with GPS",
-      description: "Safe and reliable transport service with GPS-enabled vehicles, trained drivers, and route optimization.",
+      description: "Safe and reliable transport service with 8 school buses, trained drivers, and routes covering major areas in Siwan.",
       image: "https://source.unsplash.com/800x500/?school,bus,yellow",
       features: [
-        "GPS tracking",
+        "8 school buses",
         "Trained drivers",
-        "Route optimization",
+        "Route coverage in Siwan",
         "Safety measures",
         "Multiple routes",
       ],
@@ -190,12 +190,12 @@ export default function FacilitiesPage() {
           />
           <div className="grid md:grid-cols-3 gap-4">
             {[
-              { name: "Smart Classrooms", count: "50+" },
-              { name: "Science Labs", count: "6" },
-              { name: "Computer Labs", count: "4" },
-              { name: "Library Books", count: "15,000+" },
-              { name: "Sports Facilities", count: "10+" },
-              { name: "CCTV Cameras", count: "100+" },
+              { name: "Classrooms", count: "27" },
+              { name: "Science Labs", count: "3" },
+              { name: "Computer Lab", count: "1" },
+              { name: "Campus Size", count: "2 Acres" },
+              { name: "School Buses", count: "8" },
+              { name: "Library", count: "Available" },
             ].map((stat, index) => (
               <Card key={index} className="text-center shadow-md">
                 <CardContent className="p-6">

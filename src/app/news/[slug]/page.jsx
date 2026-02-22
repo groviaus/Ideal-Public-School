@@ -21,7 +21,7 @@ export default function NewsDetailPage({ params }) {
     author: "School Administration",
     content: `The Annual Day celebration of Ideal Public School was a resounding success, bringing together students, parents, teachers, and distinguished guests for an evening of cultural extravaganza and celebration.
 
-The event commenced with the lighting of the lamp by our esteemed Principal, Dr. Sarah Johnson, followed by a warm welcome address. The evening was filled with mesmerizing performances including classical dance, modern dance, music, drama, and various other cultural presentations.
+The event commenced with the lighting of the lamp by our esteemed Principal, followed by a warm welcome address. The evening was filled with mesmerizing performances including classical dance, modern dance, music, drama, and various other cultural presentations.
 
 Students from different grades showcased their talents, leaving the audience spellbound. The highlight of the evening was the award ceremony where outstanding students were recognized for their achievements in academics, sports, and co-curricular activities.
 

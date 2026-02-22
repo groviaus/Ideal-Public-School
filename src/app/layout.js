@@ -18,7 +18,7 @@ const dancingScript = Dancing_Script({
 
 export const metadata = {
   title: "Ideal Public School",
-  description: "Nurturing Excellence Since 1995",
+  description: "Nurturing Excellence Since 2005",
 };
 
 export default function RootLayout({ children }) {

@@ -21,31 +21,31 @@ export default function ContactPage() {
   const departments = [
     {
       department: "Admissions",
-      phone: "+1 234 567 8901",
-      email: "admissions@idealschool.edu",
-      hours: "Mon-Fri: 9:00 AM - 4:00 PM",
-      person: "Ms. Jennifer Smith",
+      phone: "+91 9934991694",
+      email: "idealpublichighschool2005@gmail.com",
+      hours: "Summer: 6:00 AM - 1:00 PM | Winter: 8:00 AM - 3:00 PM",
+      person: "Admissions Office",
     },
     {
       department: "Academics",
-      phone: "+1 234 567 8902",
-      email: "academics@idealschool.edu",
-      hours: "Mon-Fri: 8:00 AM - 3:00 PM",
-      person: "Mr. Robert Williams",
+      phone: "+91 9934991694",
+      email: "idealpublichighschool2005@gmail.com",
+      hours: "Summer: 6:00 AM - 1:00 PM | Winter: 8:00 AM - 3:00 PM",
+      person: "Academic Coordinator",
     },
     {
       department: "Transport",
-      phone: "+1 234 567 8903",
-      email: "transport@idealschool.edu",
-      hours: "Mon-Fri: 8:00 AM - 5:00 PM",
-      person: "Mr. David Johnson",
+      phone: "+91 9934991694",
+      email: "idealpublichighschool2005@gmail.com",
+      hours: "Summer: 6:00 AM - 1:00 PM | Winter: 8:00 AM - 3:00 PM",
+      person: "Transport In-charge",
     },
     {
       department: "Accounts",
-      phone: "+1 234 567 8904",
-      email: "accounts@idealschool.edu",
-      hours: "Mon-Fri: 9:00 AM - 3:00 PM",
-      person: "Ms. Sarah Davis",
+      phone: "+91 9934991694",
+      email: "idealpublichighschool2005@gmail.com",
+      hours: "Summer: 6:00 AM - 1:00 PM | Winter: 8:00 AM - 3:00 PM",
+      person: "Accounts Office",
     },
   ]
 
@@ -101,9 +101,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-slate-900 mb-2">School Address</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        123 School Lane<br />
-                        Education City<br />
-                        State, Country - 123456
+                        Hasanpura, SH-87<br />
+                        District Siwan<br />
+                        Bihar, India
                       </p>
                     </div>
                   </div>
@@ -114,8 +114,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-slate-900 mb-2">Phone Numbers</h3>
                       <p className="text-muted-foreground">
-                        Main: <a href="tel:+1234567890" className="text-blue-600 hover:underline">+1 234 567 890</a><br />
-                        Reception: <a href="tel:+1234567891" className="text-blue-600 hover:underline">+1 234 567 891</a>
+                        Main: <a href="tel:+919934991694" className="text-blue-600 hover:underline">+91 9934991694</a>
                       </p>
                     </div>
                   </div>
@@ -126,8 +125,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-slate-900 mb-2">Email</h3>
                       <p className="text-muted-foreground">
-                        General: <a href="mailto:info@idealschool.edu" className="text-blue-600 hover:underline">info@idealschool.edu</a><br />
-                        Principal: <a href="mailto:principal@idealschool.edu" className="text-blue-600 hover:underline">principal@idealschool.edu</a>
+                        General: <a href="mailto:idealpublichighschool2005@gmail.com" className="text-blue-600 hover:underline">idealpublichighschool2005@gmail.com</a>
                       </p>
                     </div>
                   </div>
@@ -138,9 +136,8 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-slate-900 mb-2">Office Hours</h3>
                       <p className="text-muted-foreground">
-                        Monday - Friday: 8:00 AM - 4:00 PM<br />
-                        Saturday: 9:00 AM - 1:00 PM<br />
-                        Sunday: Closed
+                        Summer: 6:00 AM - 1:00 PM<br />
+                        Winter: 8:00 AM - 3:00 PM
                       </p>
                     </div>
                   </div>
@@ -169,15 +166,15 @@ export default function ContactPage() {
                 <div className="text-center p-4 bg-white rounded-lg shadow-sm">
                   <Phone className="h-8 w-8 text-blue-600 mx-auto mb-2" />
                   <p className="font-semibold text-slate-900">Call Us</p>
-                  <a href="tel:+12345678901" className="text-blue-600 hover:underline">
-                    +1 234 567 8901
+                  <a href="tel:+919934991694" className="text-blue-600 hover:underline">
+                    +91 9934991694
                   </a>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-sm">
                   <Mail className="h-8 w-8 text-green-600 mx-auto mb-2" />
                   <p className="font-semibold text-slate-900">Email Us</p>
-                  <a href="mailto:admissions@idealschool.edu" className="text-green-600 hover:underline break-all">
-                    admissions@idealschool.edu
+                  <a href="mailto:idealpublichighschool2005@gmail.com" className="text-green-600 hover:underline break-all">
+                    idealpublichighschool2005@gmail.com
                   </a>
                 </div>
               </div>
@@ -196,15 +193,15 @@ export default function ContactPage() {
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Transport Enquiry</h3>
                   <p className="text-muted-foreground mb-4">
-                    Our transport service covers major areas in the city with GPS-enabled vehicles 
+                    Our transport service covers major areas in Siwan district with 8 school buses 
                     and trained drivers. For route information and availability, please contact:
                   </p>
                   <div className="space-y-2">
                     <p className="text-sm">
-                      <strong>Phone:</strong> <a href="tel:+12345678903" className="text-blue-600 hover:underline">+1 234 567 8903</a>
+                      <strong>Phone:</strong> <a href="tel:+919934991694" className="text-blue-600 hover:underline">+91 9934991694</a>
                     </p>
                     <p className="text-sm">
-                      <strong>Email:</strong> <a href="mailto:transport@idealschool.edu" className="text-blue-600 hover:underline">transport@idealschool.edu</a>
+                      <strong>Email:</strong> <a href="mailto:idealpublichighschool2005@gmail.com" className="text-blue-600 hover:underline">idealpublichighschool2005@gmail.com</a>
                     </p>
                   </div>
                 </div>

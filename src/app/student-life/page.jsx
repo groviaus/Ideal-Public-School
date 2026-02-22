@@ -133,7 +133,7 @@ export default function StudentLifePage() {
       icon: "trophy",
       title: "State Level Science Fair",
       description: "First place in State Science Fair competition",
-      student: "Rahul Sharma - Grade 10",
+      student: "Rahul Sharma - Class 8",
       date: "March 2024",
       badge: "1st Place",
     },
@@ -141,7 +141,7 @@ export default function StudentLifePage() {
       icon: "award",
       title: "National Mathematics Olympiad",
       description: "Qualified for International Mathematics Olympiad",
-      student: "Priya Patel - Grade 12",
+      student: "Priya Patel - Class 8",
       date: "February 2024",
       badge: "Qualified",
     },
@@ -157,7 +157,7 @@ export default function StudentLifePage() {
       icon: "trophy",
       title: "Debate Competition",
       description: "Best Speaker award in Regional Debate",
-      student: "Amit Kumar - Grade 11",
+      student: "Amit Kumar - Class 7",
       date: "December 2023",
       badge: "Best Speaker",
     },
@@ -165,7 +165,7 @@ export default function StudentLifePage() {
       icon: "award",
       title: "Art Exhibition",
       description: "Outstanding artwork selected for national exhibition",
-      student: "Sneha Reddy - Grade 9",
+      student: "Sneha Reddy - Class 6",
       date: "November 2023",
       badge: "Selected",
     },
@@ -299,10 +299,10 @@ export default function StudentLifePage() {
           />
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { position: "Head Boy", name: "Arjun Mehta", grade: "Grade 12" },
-              { position: "Head Girl", name: "Kavya Nair", grade: "Grade 12" },
-              { position: "Vice Head Boy", name: "Rohan Singh", grade: "Grade 11" },
-              { position: "Vice Head Girl", name: "Ananya Sharma", grade: "Grade 11" },
+              { position: "Head Boy", name: "Arjun Mehta", grade: "Class 8" },
+              { position: "Head Girl", name: "Kavya Nair", grade: "Class 8" },
+              { position: "Vice Head Boy", name: "Rohan Singh", grade: "Class 7" },
+              { position: "Vice Head Girl", name: "Ananya Sharma", grade: "Class 7" },
             ].map((member, index) => (
               <Card key={index} className="shadow-md text-center">
                 <CardContent className="p-6">

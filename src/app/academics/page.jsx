@@ -26,88 +26,61 @@ export default function AcademicsPage() {
       image: "https://source.unsplash.com/800x600/?kindergarten,children,learning",
       features: [
         "Activity-based learning",
-        "Montessori-inspired methods",
         "Creative arts and crafts",
         "Physical development activities",
-        "Language development programs",
+        "Language development (Hindi & English)",
+        "Social skills and values",
       ],
     },
     {
-      grade: "Primary (Grade 1 - 5)",
+      grade: "Primary (Class 1 - 5)",
       ageRange: "6-11 years",
       description: "Building strong academic foundations with emphasis on conceptual understanding and critical thinking.",
       image: "https://source.unsplash.com/800x600/?primary,school,children",
       features: [
         "CBSE curriculum",
-        "Interactive smart classrooms",
+        "Smart classrooms",
         "Project-based learning",
         "Regular assessments",
         "Co-curricular activities",
       ],
     },
     {
-      grade: "Secondary (Grade 6 - 10)",
-      ageRange: "11-16 years",
-      description: "Comprehensive education preparing students for board examinations with focus on academic excellence.",
+      grade: "Middle School (Class 6 - 8)",
+      ageRange: "11-14 years",
+      description: "Comprehensive education with experiential and discussion-based learning, preparing students for academic excellence.",
       image: "https://source.unsplash.com/800x600/?teenagers,students,classroom",
       features: [
-        "Structured CBSE syllabus",
-        "Subject specialization",
-        "Laboratory-based learning",
-        "Exam preparation programs",
-        "Career guidance",
-      ],
-    },
-    {
-      grade: "Senior Secondary (Grade 11 - 12)",
-      ageRange: "16-18 years",
-      description: "Specialized streams preparing students for higher education and competitive examinations.",
-      image: "https://source.unsplash.com/800x600/?high,school,students",
-      features: [
-        "Stream selection (Science/Commerce/Arts)",
-        "Board exam preparation",
-        "Career counseling",
-        "Entrance exam coaching",
-        "Research projects",
+        "Structured CBSE syllabus across 10 subjects",
+        "Laboratory-based learning (Physics, Chemistry, Biology, Computer)",
+        "Discussion-based learning",
+        "Smart classes",
+        "Languages: Hindi & English",
       ],
     },
   ]
 
-  const streams = [
+  const subjectsOverview = [
     {
-      name: "Science Stream",
-      badge: "Grade 11-12",
+      name: "Core Subjects",
+      badge: "Class 1-8",
       subjects: [
-        { name: "Physics", code: "041" },
-        { name: "Chemistry", code: "043" },
-        { name: "Mathematics", code: "041" },
-        { name: "Biology", code: "044" },
-        { name: "English Core", code: "301" },
-        { name: "Computer Science", code: "083" },
+        { name: "Hindi", code: "" },
+        { name: "English", code: "" },
+        { name: "Mathematics", code: "" },
+        { name: "Science", code: "" },
+        { name: "Social Studies", code: "" },
+        { name: "Computer Science", code: "" },
       ],
     },
     {
-      name: "Commerce Stream",
-      badge: "Grade 11-12",
+      name: "Additional Subjects",
+      badge: "Class 1-8",
       subjects: [
-        { name: "Accountancy", code: "055" },
-        { name: "Business Studies", code: "054" },
-        { name: "Economics", code: "030" },
-        { name: "Mathematics", code: "041" },
-        { name: "English Core", code: "301" },
-        { name: "Informatics Practices", code: "065" },
-      ],
-    },
-    {
-      name: "Arts Stream",
-      badge: "Grade 11-12",
-      subjects: [
-        { name: "History", code: "027" },
-        { name: "Political Science", code: "028" },
-        { name: "Economics", code: "030" },
-        { name: "Psychology", code: "037" },
-        { name: "English Core", code: "301" },
-        { name: "Physical Education", code: "048" },
+        { name: "Moral Science", code: "" },
+        { name: "General Knowledge", code: "" },
+        { name: "Art & Craft", code: "" },
+        { name: "Physical Education", code: "" },
       ],
     },
   ]
@@ -167,23 +140,23 @@ export default function AcademicsPage() {
   const methodologies = [
     {
       icon: "inquiry",
-      title: "Inquiry-Based Learning",
-      description: "Students explore questions and problems, developing critical thinking and research skills.",
-    },
-    {
-      icon: "collaboration",
-      title: "Collaborative Learning",
-      description: "Group activities and projects that promote teamwork, communication, and peer learning.",
-    },
-    {
-      icon: "action",
       title: "Experiential Learning",
       description: "Hands-on activities, experiments, and real-world applications to deepen understanding.",
     },
     {
+      icon: "collaboration",
+      title: "Discussion-Based Learning",
+      description: "Interactive group discussions that promote critical thinking, communication, and peer learning.",
+    },
+    {
+      icon: "action",
+      title: "Smart Classes",
+      description: "Technology-enhanced classrooms with digital tools for visual, interactive, and engaging lessons.",
+    },
+    {
       icon: "reflection",
-      title: "Reflective Practice",
-      description: "Regular self-assessment and reflection to enhance learning outcomes and metacognition.",
+      title: "Project-Based Learning",
+      description: "Real-world projects and assignments that develop research skills and collaborative problem-solving.",
     },
   ]
 
@@ -273,10 +246,10 @@ export default function AcademicsPage() {
         <section className="mb-16">
           <SectionHeading
             badge="Subjects"
-            title="Subjects Offered by Stream"
-            description="Comprehensive subject options for Senior Secondary students across Science, Commerce, and Arts streams."
+            title="Subjects Offered"
+            description="Comprehensive subject offerings across 10 subjects with Hindi and English as medium of instruction."
           />
-          <SubjectList streams={streams} />
+          <SubjectList streams={subjectsOverview} />
         </section>
 
         {/* Teaching Methodology */}
@@ -343,7 +316,7 @@ export default function AcademicsPage() {
           <SectionHeading
             badge="Calendar"
             title="Academic Calendar"
-            description="Important dates and events for the academic year 2024-25."
+            description="Important dates and events for the academic year 2025-26."
           />
           <CalendarWidget events={calendarEvents} />
         </section>
@@ -399,7 +372,7 @@ export default function AcademicsPage() {
               {
                 icon: Library,
                 title: "Library",
-                description: "15,000+ books, digital resources, and reading programs",
+                description: "Books, digital resources, and reading programs to support learning",
               },
               {
                 icon: BookOpen,

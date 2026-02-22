@@ -16,24 +16,24 @@ const Achievements = () => {
             <div className="mx-auto w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mb-4 text-yellow-500">
                <Trophy className="h-8 w-8" />
             </div>
-            <h3 className="text-4xl font-bold mb-2 text-white">100%</h3>
-            <p className="text-slate-400">Board Results (Class X & XII)</p>
+             <h3 className="text-4xl font-bold mb-2 text-white">100%</h3>
+             <p className="text-slate-400">Board Results (Class VIII)</p>
          </div>
          
          <div className="p-6 rounded-2xl bg-slate-800 border border-slate-700">
             <div className="mx-auto w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mb-4 text-blue-500">
                <Medal className="h-8 w-8" />
             </div>
-            <h3 className="text-4xl font-bold mb-2 text-white">50+</h3>
-            <p className="text-slate-400">National Level Awards</p>
+             <h3 className="text-4xl font-bold mb-2 text-white">20+</h3>
+             <p className="text-slate-400">Years of Excellence</p>
          </div>
          
          <div className="p-6 rounded-2xl bg-slate-800 border border-slate-700">
             <div className="mx-auto w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-4 text-green-500">
                <Star className="h-8 w-8" />
             </div>
-            <h3 className="text-4xl font-bold mb-2 text-white">Top 10</h3>
-            <p className="text-slate-400">Ranked in City Schools</p>
+             <h3 className="text-4xl font-bold mb-2 text-white">Est. 2005</h3>
+             <p className="text-slate-400">Trusted by Families in Siwan</p>
          </div>
       </div>
     </SectionWrapper>

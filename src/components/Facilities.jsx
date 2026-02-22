@@ -1,45 +1,51 @@
 import Image from "next/image"
 import SectionWrapper from "@/components/SectionWrapper"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Library, FlaskConical, Trophy, Bus, Stethoscope, Wifi } from "lucide-react"
+import { Library, FlaskConical, Bus, Wifi } from "lucide-react"
 
 const Facilities = () => {
   const facilities = [
     {
-      title: "Modern Library",
-      description: "Stocked with over 10,000 books, journals, and digital resources.",
+      title: "27 Smart Classrooms",
+      description: "Spacious and well-equipped classrooms spread across our 2-acre campus for an optimal learning environment.",
       icon: <Library className="h-8 w-8 text-blue-500" />,
+      image: "https://source.unsplash.com/800x500/?classroom,school,learning"
+    },
+    {
+      title: "Physics Lab",
+      description: "Fully equipped Physics laboratory for hands-on experiential learning and experiments.",
+      icon: <FlaskConical className="h-8 w-8 text-green-500" />,
+      image: "https://source.unsplash.com/800x500/?physics,laboratory,experiment"
+    },
+    {
+      title: "Chemistry Lab",
+      description: "Modern Chemistry lab with all essential apparatus and safety equipment for practical learning.",
+      icon: <FlaskConical className="h-8 w-8 text-purple-500" />,
+      image: "https://source.unsplash.com/800x500/?chemistry,laboratory,science"
+    },
+    {
+      title: "Biology Lab",
+      description: "Well-stocked Biology lab with microscopes and specimens for in-depth study of life sciences.",
+      icon: <FlaskConical className="h-8 w-8 text-teal-500" />,
+      image: "https://source.unsplash.com/800x500/?biology,laboratory,microscope"
+    },
+    {
+      title: "Computer Lab",
+      description: "State-of-the-art Computer lab to build digital literacy and programming skills from an early age.",
+      icon: <Wifi className="h-8 w-8 text-orange-500" />,
+      image: "https://source.unsplash.com/800x500/?computer,lab,technology"
+    },
+    {
+      title: "Library",
+      description: "A well-stocked library with books, journals, and digital resources to nurture a love for reading.",
+      icon: <Library className="h-8 w-8 text-red-500" />,
       image: "https://source.unsplash.com/800x500/?library,books,reading"
     },
     {
-      title: "Science Labs",
-      description: "State-of-the-art Physics, Chemistry, and Biology laboratories.",
-      icon: <FlaskConical className="h-8 w-8 text-green-500" />,
-      image: "https://source.unsplash.com/800x500/?science,laboratory,experiment"
-    },
-    {
-      title: "Sports Complex",
-      description: "Indoor and outdoor facilities for Cricket, Football, Basketball, and more.",
-      icon: <Trophy className="h-8 w-8 text-orange-500" />,
-      image: "https://source.unsplash.com/800x500/?sports,playground,athletics"
-    },
-    {
-      title: "Transport",
-      description: "GPS-enabled bus fleet covering all major routes for safe commute.",
+      title: "8 School Buses",
+      description: "Safe and reliable transport service with 8 school buses covering major routes in and around Siwan.",
       icon: <Bus className="h-8 w-8 text-yellow-500" />,
       image: "https://source.unsplash.com/800x500/?school,bus,yellow"
-    },
-    {
-      title: "Medical Room",
-      description: "Full-time nurse and visiting doctors for health checkups and emergencies.",
-      icon: <Stethoscope className="h-8 w-8 text-red-500" />,
-      image: "https://source.unsplash.com/800x500/?medical,clinic,healthcare"
-    },
-    {
-      title: "Wi-Fi Campus",
-      description: "High-speed internet access across the campus for digital learning.",
-      icon: <Wifi className="h-8 w-8 text-purple-500" />,
-      image: null
     }
   ]
 

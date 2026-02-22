@@ -10,14 +10,14 @@ const PrincipalMessage = () => {
              <div className="aspect-[3/4] rounded-2xl bg-slate-200 overflow-hidden relative shadow-xl">
                <Image
                  src="https://source.unsplash.com/600x800/?professional,portrait,education"
-                 alt="Dr. Sarah Johnson, Principal of Ideal Public School"
+                 alt="The Principal, Ideal Public School"
                  fill
                  className="object-cover"
                  unoptimized
                />
                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent text-white">
-                  <p className="font-bold text-lg">Dr. Sarah Johnson</p>
-                  <p className="text-sm opacity-90">Principal, Ideal Public School</p>
+                  <p className="font-bold text-lg">The Principal</p>
+                  <p className="text-sm opacity-90">Ideal Public School, Siwan</p>
                </div>
              </div>
           </div>
@@ -26,22 +26,22 @@ const PrincipalMessage = () => {
                <Quote className="h-6 w-6" />
              </div>
              <h2 className="text-3xl font-bold tracking-tighter text-slate-900">
-               "Education is not the filling of a pail, but the lighting of a fire."
+               "Education is the harmonious blend of knowledge and character."
              </h2>
              <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                <p>
-                 Welcome to Ideal Public School. Our mission is to provide a safe, nurturing, and challenging environment where every student is encouraged to strive for excellence.
+                 Welcome to Ideal Public School. Our vision is to create a happy, safe, and inspiring place where children love to come to school each day. A place where learning is joyful, friendships are built, and every child feels valued and confident.
                </p>
                <p>
-                 We believe in a holistic approach to education that addresses the intellectual, emotional, social, and physical development of each child. Our dedicated faculty and state-of-the-art facilities ensure that our students are well-prepared for the future.
+                 We encourage students to discover their strengths, express their creativity, and grow at their own pace, supported by caring teachers and a nurturing environment that helps them flourish.
                </p>
                <p>
-                 I invite you to explore our website and visit our campus to experience the vibrant community that makes Ideal Public School a special place for learning.
+                 We are committed to creating an environment where progressive learning meets enduring values, preparing learners for a rapidly evolving world.
                </p>
              </div>
              
              <div className="pt-4">
-                <p className="font-handwriting text-2xl text-blue-600">Jane Doe</p>
+                <p className="font-handwriting text-2xl text-blue-600">The Principal</p>
              </div>
           </div>
        </div>

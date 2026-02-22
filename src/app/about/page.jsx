@@ -21,58 +21,58 @@ export const metadata = {
 export default function AboutPage() {
   const timelineEvents = [
     {
-      year: "1995",
+      year: "2005",
       title: "School Founded",
-      location: "Education City",
-      description: "Ideal Public School was established with a vision to provide quality education and holistic development to students in the region.",
+      location: "Siwan, Bihar",
+      description: "Ideal Public School was established in Hasanpura, SH-87, District Siwan with a vision to provide quality education grounded in ethics, moral values, and integrity.",
     },
     {
-      year: "2000",
+      year: "2008",
       title: "CBSE Affiliation",
-      location: "Education City",
+      location: "Siwan, Bihar",
       description: "Received CBSE affiliation, marking a significant milestone in our journey towards academic excellence.",
     },
     {
-      year: "2010",
+      year: "2015",
       title: "Infrastructure Expansion",
-      location: "Education City",
-      description: "Expanded our campus with state-of-the-art facilities including science labs, computer labs, and a modern library.",
+      location: "Siwan, Bihar",
+      description: "Expanded our 2-acre campus with 27 classrooms, science labs (Physics, Chemistry, Biology), and a Computer Lab.",
     },
     {
       year: "2020",
-      title: "Digital Transformation",
-      location: "Education City",
-      description: "Implemented smart classrooms and digital learning platforms to enhance the educational experience.",
+      title: "Smart Classrooms",
+      location: "Siwan, Bihar",
+      description: "Implemented smart classrooms and modern teaching methodologies including experiential learning and project-based learning.",
     },
   ]
 
   const leadership = [
     {
-      name: "Dr. Sarah Johnson",
+      name: "The Principal",
       designation: "Principal",
       department: "Administration",
-      qualification: "Ph.D. in Education, M.Ed.",
-      experience: "25+ years",
-      email: "principal@idealschool.edu",
-      bio: "With over 25 years of experience in education, Dr. Johnson is committed to fostering academic excellence and character development.",
+      qualification: "Education Leadership",
+      experience: "20+ years",
+      email: "idealpublichighschool2005@gmail.com",
+      bio: "Committed to fostering academic excellence and character development at Ideal Public School, Siwan.",
     },
     {
-      name: "Mr. Robert Williams",
+      name: "The Vice Principal",
       designation: "Vice Principal",
       department: "Administration",
-      qualification: "M.Ed., B.Sc.",
-      experience: "20+ years",
-      email: "viceprincipal@idealschool.edu",
-      bio: "Mr. Williams brings extensive experience in curriculum development and student welfare programs.",
+      qualification: "Education Administration",
+      experience: "15+ years",
+      email: "idealpublichighschool2005@gmail.com",
+      bio: "Brings extensive experience in curriculum development and student welfare programs.",
     },
     {
-      name: "Ms. Emily Davis",
+      name: "Academic Coordinator",
       designation: "Academic Coordinator",
       department: "Academics",
-      qualification: "M.A. in English, B.Ed.",
-      experience: "15+ years",
-      email: "academic@idealschool.edu",
-      bio: "Ms. Davis oversees academic programs and ensures high standards of teaching and learning.",
+      qualification: "M.A., B.Ed.",
+      experience: "10+ years",
+      email: "idealpublichighschool2005@gmail.com",
+      bio: "Oversees academic programs and ensures high standards of teaching and learning.",
     },
   ]
 
@@ -81,21 +81,21 @@ export default function AboutPage() {
       name: "CBSE Affiliation",
       badge: "Affiliated",
       description: "Central Board of Secondary Education",
-      year: "2000",
+      year: "2008",
       icon: "award",
     },
     {
-      name: "ISO 9001:2015",
-      badge: "Certified",
-      description: "Quality Management System",
-      year: "2015",
+      name: "Co-educational",
+      badge: "School Type",
+      description: "English & Hindi Medium",
+      year: "2005",
       icon: "check",
     },
     {
-      name: "Green School",
-      badge: "Award",
-      description: "Environmental Excellence",
-      year: "2018",
+      name: "Nursery – Class 8",
+      badge: "Grades",
+      description: "Complete Primary & Middle Education",
+      year: "2005",
       icon: "award",
     },
   ]
@@ -106,7 +106,7 @@ export default function AboutPage() {
       
       <PageHero
         title="About Us"
-        subtitle="Nurturing Excellence Since 1995 - Discover our rich history, mission, and commitment to holistic education."
+        subtitle="Nurturing Excellence Since 2005 - Discover our rich history, mission, and commitment to holistic education."
         breadcrumbItems={[{ label: "About", href: "/about" }]}
       />
 
@@ -122,7 +122,7 @@ export default function AboutPage() {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
               <Image
                 src="https://source.unsplash.com/1200x800/?school,history,education"
-                alt="School journey and history of Ideal Public School since 1995"
+                alt="School journey and history of Ideal Public School since 2005"
                 fill
                 className="object-cover"
                 unoptimized
@@ -143,23 +143,23 @@ export default function AboutPage() {
             <MissionVisionCard
               type="mission"
               title="Our Mission"
-              description="To provide a world-class education that nurtures critical thinking, creativity, and character development, preparing students to become responsible global citizens and future leaders."
+              description="Our mission is to envision the future with bold ambition and purposeful direction. We are committed to creating an environment where progressive learning meets enduring values, preparing learners for a rapidly evolving world. Through innovative and interactive approaches to education, we foster a vibrant culture of collaboration, curiosity, and shared knowledge—empowering every learner to grow, contribute, and thrive."
             />
             <MissionVisionCard
               type="vision"
               title="Our Vision"
-              description="To be a premier educational institution recognized for academic excellence, innovative teaching methods, and holistic development of students."
+              description="Our vision is to create a happy, safe, and inspiring place where children love to come to school each day. A place where learning is joyful, friendships are built, and every child feels valued and confident. We encourage students to discover their strengths, express their creativity, and grow at their own pace, supported by caring teachers and a nurturing environment that helps them flourish."
             />
             <MissionVisionCard
               type="values"
               title="Our Values"
-              description="The fundamental values that shape our educational philosophy:"
+              description="At Ideal, education is the harmonious blend of knowledge and character:"
               values={[
-                "Excellence in all endeavors",
-                "Integrity and ethical conduct",
-                "Respect for diversity",
-                "Innovation and creativity",
-                "Social responsibility",
+                "Ethics, moral values, and integrity",
+                "Wisdom, discipline, and confidence",
+                "Dream fearlessly, act responsibly",
+                "Innovation and collaboration",
+                "Nurturing environment for growth",
               ]}
             />
           </div>
@@ -188,14 +188,14 @@ export default function AboutPage() {
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { name: "Smart Classrooms", count: "50+" },
-              { name: "Science Labs", count: "6" },
-              { name: "Computer Labs", count: "4" },
-              { name: "Library Books", count: "15,000+" },
-              { name: "Sports Facilities", count: "10+" },
-              { name: "Auditorium Capacity", count: "500" },
-              { name: "Transport Vehicles", count: "25" },
-              { name: "CCTV Cameras", count: "100+" },
+              { name: "Classrooms", count: "27" },
+              { name: "Science Labs", count: "3" },
+              { name: "Computer Lab", count: "1" },
+              { name: "Library", count: "Available" },
+              { name: "Campus Size", count: "2 Acres" },
+              { name: "School Buses", count: "8" },
+              { name: "Subjects Offered", count: "10" },
+              { name: "Languages", count: "Hindi & English" },
             ].map((facility, index) => (
               <Card key={index} className="text-center shadow-md">
                 <CardContent className="p-6">

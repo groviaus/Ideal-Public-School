@@ -9,7 +9,7 @@ const Admissions = () => {
       <div className="text-center mb-12 space-y-4">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Admissions</h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Join our growing family. Admissions are now open for the academic session 2025-26.
+           Join our growing family. Admissions are now open for the academic session 2025-26 for Nursery – Class 8.
         </p>
       </div>
 
@@ -47,7 +47,7 @@ const Admissions = () => {
              <ul className="space-y-2">
                <li className="flex gap-2">
                  <CheckCircle2 className="h-4 w-4 text-green-500 shrink-0" />
-                 <span>Pre-Nursery: 3+ Years</span>
+                 <span>Nursery: 3+ Years</span>
                </li>
                <li className="flex gap-2">
                  <CheckCircle2 className="h-4 w-4 text-green-500 shrink-0" />
@@ -94,7 +94,7 @@ const Admissions = () => {
            <FileText className="h-4 w-4" />
         </Button>
         <p className="mt-4 text-sm text-muted-foreground">
-          For queries, call us at <span className="font-semibold">+91-123-456-7890</span>
+           For queries, call us at <span className="font-semibold">+91 9934991694</span>
         </p>
       </div>
     </SectionWrapper>

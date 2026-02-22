@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Ideal Public School</h3>
             <p className="text-slate-400 text-sm">
-              Empowering students to become future leaders through excellence in education and character building.
+              Empowering young minds with wisdom, discipline, and confidence since 2005. CBSE affiliated, Nursery – Class 8.
             </p>
             <div className="flex space-x-4">
               <div className="rounded-full bg-slate-800 p-2 hover:bg-primary hover:text-white transition-colors cursor-pointer">
@@ -43,15 +43,15 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-slate-400">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 shrink-0 text-primary" />
-                <span>123 School Lane, Education City,<br/> State, Country - 123456</span>
+                <span>Hasanpura, SH-87,<br/> District Siwan, Bihar</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-primary" />
-                <span>+1 234 567 890</span>
+                <span>+91 9934991694</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-primary" />
-                <span>info@idealschool.edu</span>
+                <span>idealpublichighschool2005@gmail.com</span>
               </li>
             </ul>
           </div>

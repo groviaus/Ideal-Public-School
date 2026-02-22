@@ -29,11 +29,10 @@ export default function Home() {
               About Us
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-slate-900">
-              Nurturing Excellence Since 1995
+              Nurturing Excellence Since 2005
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Ideal Public School is a premier educational institution committed to providing holistic education. 
-              Affiliated with CBSE, we are located in the heart of the city, offering a serene and conducive environment for learning that empowers students to reach their full potential.
+              At Ideal, education is the harmonious blend of knowledge and character. We shape future citizens grounded in ethics, moral values, and integrity. We empower young minds with wisdom, discipline, and confidence, enabling them to dream fearlessly, act responsibly, and rise with the strength to reach for the stars.
             </p>
             
             <div className="grid grid-cols-2 gap-y-4 gap-x-6">
@@ -47,7 +46,7 @@ export default function Home() {
                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">
                     <Users className="h-5 w-5 text-green-600" />
                  </div>
-                 <span className="font-medium text-slate-700">2000+ Students</span>
+                 <span className="font-medium text-slate-700">Co-educational</span>
               </div>
               <div className="flex items-center gap-3">
                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">
@@ -59,7 +58,7 @@ export default function Home() {
                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100">
                     <Trophy className="h-5 w-5 text-orange-600" />
                  </div>
-                 <span className="font-medium text-slate-700">Award Winning</span>
+                 <span className="font-medium text-slate-700">Nursery – Class 8</span>
               </div>
             </div>
 

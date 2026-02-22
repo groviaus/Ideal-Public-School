@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
             Why Choose Ideal Public School?
           </h2>
           <p className="text-lg text-muted-foreground">
-             We believe in empowering students with knowledge, values, and skills to face the challenges of the future. Here is what sets us apart.
+             We shape future citizens grounded in ethics, moral values, and integrity. Here is what sets us apart.
           </p>
           <div className="grid sm:grid-cols-2 gap-6 mt-8">
             {reasons.map((reason, index) => (
