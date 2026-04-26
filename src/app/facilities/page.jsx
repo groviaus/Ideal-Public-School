@@ -9,6 +9,8 @@ import ImageGallerySlider from "@/components/facilities/ImageGallerySlider"
 import VirtualTourEmbed from "@/components/facilities/VirtualTourEmbed"
 import SafetyChecklist from "@/components/facilities/SafetyChecklist"
 import { Card, CardContent } from "@/components/ui/card"
+import { facilityTourSliderPhotos } from "@/lib/schoolPhotos"
+import { STOCK_IMAGES } from "@/lib/stockImages"
 
 export const metadata = {
   title: "Facilities | Ideal Public School",
@@ -20,7 +22,7 @@ export default function FacilitiesPage() {
     {
       name: "Smart Classrooms",
       description: "Fully equipped smart classrooms with interactive whiteboards, projectors, and digital learning tools to enhance the teaching and learning experience.",
-      image: "https://source.unsplash.com/800x600/?classroom,smart,technology",
+      image: "/images/classroom-students-windows-fans.jpeg",
       features: [
         "Interactive whiteboards",
         "Digital projectors",
@@ -32,7 +34,7 @@ export default function FacilitiesPage() {
     {
       name: "Library & Reading Room",
       description: "A well-stocked library with books, journals, and digital resources for students and a quiet reading room.",
-      image: "https://source.unsplash.com/800x500/?library,books,reading",
+      image: "/images/classroom-students-alternate-angle.jpeg",
       features: [
         "Books and journals",
         "Digital library access",
@@ -44,7 +46,7 @@ export default function FacilitiesPage() {
     {
       name: "Science Laboratories",
       description: "Fully equipped Physics, Chemistry, Biology, and Computer Science laboratories with modern equipment and safety measures.",
-      image: "https://source.unsplash.com/800x500/?science,laboratory,experiment",
+      image: "/images/classroom-view-toward-whiteboard.jpeg",
       features: [
         "Physics Lab",
         "Chemistry Lab",
@@ -56,7 +58,7 @@ export default function FacilitiesPage() {
     {
       name: "Sports Facilities",
       description: "Comprehensive indoor and outdoor sports facilities including basketball court, football field, cricket ground, and more.",
-      image: "https://source.unsplash.com/800x500/?sports,playground,athletics",
+      image: "/images/trophy-presentation-boy-uniform.jpeg",
       features: [
         "Basketball court",
         "Football field",
@@ -68,7 +70,7 @@ export default function FacilitiesPage() {
     {
       name: "Auditorium & Assembly Hall",
       description: "A spacious auditorium with seating capacity of 500, equipped with modern sound and lighting systems for events and assemblies.",
-      image: "https://source.unsplash.com/800x600/?auditorium,hall,stage",
+      image: "/images/cultural-event-outdoor-stage.jpeg",
       features: [
         "500-seat capacity",
         "Sound system",
@@ -80,7 +82,7 @@ export default function FacilitiesPage() {
     {
       name: "Cafeteria/Canteen",
       description: "A clean and hygienic cafeteria serving nutritious meals and snacks, following strict food safety standards.",
-      image: "https://source.unsplash.com/800x600/?cafeteria,canteen,dining",
+      image: STOCK_IMAGES.cafeteria,
       features: [
         "Hygienic kitchen",
         "Nutritious meals",
@@ -92,7 +94,7 @@ export default function FacilitiesPage() {
     {
       name: "Medical Room",
       description: "A well-equipped medical room with a qualified nurse and first-aid facilities to handle medical emergencies.",
-      image: "https://source.unsplash.com/800x500/?medical,clinic,healthcare",
+      image: STOCK_IMAGES.medical,
       features: [
         "Qualified nurse",
         "First-aid equipment",
@@ -104,7 +106,7 @@ export default function FacilitiesPage() {
     {
       name: "Transport with GPS",
       description: "Safe and reliable transport service with 8 school buses, trained drivers, and routes covering major areas in Siwan.",
-      image: "https://source.unsplash.com/800x500/?school,bus,yellow",
+      image: "/images/school-entrance-gate-sign.jpeg",
       features: [
         "8 school buses",
         "Trained drivers",
@@ -116,7 +118,7 @@ export default function FacilitiesPage() {
     {
       name: "Security & CCTV",
       description: "24/7 security with CCTV surveillance covering all areas of the campus, ensuring a safe learning environment.",
-      image: "https://source.unsplash.com/800x600/?security,camera,surveillance",
+      image: "/images/school-interior-corridor.jpeg",
       features: [
         "100+ CCTV cameras",
         "24/7 security staff",
@@ -233,15 +235,7 @@ export default function FacilitiesPage() {
             description="Take a visual tour of our facilities and infrastructure."
           />
           <div className="max-w-4xl mx-auto">
-            <ImageGallerySlider
-              images={[
-                "https://source.unsplash.com/800x600/?school,classroom,learning",
-                "https://source.unsplash.com/800x600/?science,laboratory,experiment",
-                "https://source.unsplash.com/800x600/?library,books,reading",
-                "https://source.unsplash.com/800x600/?sports,playground,athletics",
-                "https://source.unsplash.com/800x600/?auditorium,hall,stage",
-              ]}
-            />
+            <ImageGallerySlider images={facilityTourSliderPhotos} />
           </div>
         </section>
 

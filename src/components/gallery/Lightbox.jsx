@@ -30,7 +30,12 @@ const Lightbox = ({ images = [], currentIndex = 0, isOpen, onClose, onNavigate }
 
   if (!isOpen || images.length === 0) return null
 
-  const currentImage = images[currentIndex]
+  const current = images[currentIndex]
+  const currentSrc = typeof current === "string" ? current : current?.src
+  const currentAlt =
+    typeof current === "string"
+      ? `Gallery image ${currentIndex + 1} from Ideal Public School`
+      : current?.alt || `Gallery image ${currentIndex + 1} from Ideal Public School`
 
   return (
     <div
@@ -75,10 +80,10 @@ const Lightbox = ({ images = [], currentIndex = 0, isOpen, onClose, onNavigate }
         )}
 
         <div className="relative">
-          {currentImage ? (
+          {currentSrc ? (
             <img
-              src={currentImage}
-              alt={`Gallery image ${currentIndex + 1}`}
+              src={currentSrc}
+              alt={currentAlt}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
             />
           ) : (

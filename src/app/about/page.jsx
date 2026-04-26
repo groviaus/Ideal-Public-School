@@ -11,7 +11,8 @@ import AccreditationBadges from "@/components/about/AccreditationBadges"
 import MissionVisionCard from "@/components/about/MissionVisionCard"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Music, Globe } from "lucide-react"
+import { ArrowRight, Globe } from "lucide-react"
+import { aboutHistoryBanner, schoolLogo } from "@/lib/schoolPhotos"
 
 export const metadata = {
   title: "About Us | Ideal Public School",
@@ -121,9 +122,10 @@ export default function AboutPage() {
           <div className="mb-12">
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="https://source.unsplash.com/1200x800/?school,history,education"
-                alt="School journey and history of Ideal Public School since 2005"
+                src={aboutHistoryBanner.src}
+                alt={aboutHistoryBanner.alt}
                 fill
+                sizes="(max-width: 1024px) 100vw, 896px"
                 className="object-cover"
                 unoptimized
               />
@@ -231,8 +233,15 @@ export default function AboutPage() {
           <Card className="shadow-md">
             <CardContent className="p-8">
               <div className="flex items-start gap-4 mb-6">
-                <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center flex-shrink-0">
-                  <Music className="h-6 w-6 text-white" />
+                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <Image
+                    src={schoolLogo.src}
+                    alt={schoolLogo.alt}
+                    fill
+                    className="object-contain p-1.5"
+                    sizes="64px"
+                    unoptimized
+                  />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Ideal Public School Anthem</h3>

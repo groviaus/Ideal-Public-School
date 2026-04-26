@@ -249,17 +249,17 @@ export default function StudentLifePage() {
               {
                 title: "Performing Arts",
                 items: ["Dance", "Music", "Drama", "Theater"],
-                image: "https://source.unsplash.com/800x600/?music,dance,students",
+                image: "/images/cultural-event-outdoor-stage.jpeg",
               },
               {
                 title: "Visual Arts",
                 items: ["Painting", "Drawing", "Sculpture", "Photography"],
-                image: "https://source.unsplash.com/800x600/?art,craft,creative",
+                image: "/images/staff-students-certificate-whiteboard.jpeg",
               },
               {
                 title: "Sports & Fitness",
                 items: ["Basketball", "Football", "Cricket", "Athletics", "Swimming"],
-                image: "https://source.unsplash.com/800x600/?sports,club,activity",
+                image: "/images/trophy-presentation-boy-uniform.jpeg",
               },
             ].map((category, index) => (
               <Card key={index} className="shadow-md overflow-hidden group">
@@ -269,6 +269,7 @@ export default function StudentLifePage() {
                       src={category.image}
                       alt={`${category.title} activities at Ideal Public School`}
                       fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       unoptimized
                     />

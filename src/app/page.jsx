@@ -15,6 +15,7 @@ import Testimonials from "@/components/Testimonials"
 import Admissions from "@/components/Admissions"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, BadgeCheck, BookOpen, Users, Trophy } from "lucide-react"
+import { homeAboutImage } from "@/lib/schoolPhotos"
 
 export default function Home() {
   return (
@@ -68,9 +69,10 @@ export default function Home() {
           </div>
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-2xl bg-slate-100 border border-slate-200">
              <Image
-               src="https://source.unsplash.com/800x600/?students,classroom,learning"
-               alt="Students learning in modern classroom at Ideal Public School"
+               src={homeAboutImage.src}
+               alt={homeAboutImage.alt}
                fill
+               sizes="(max-width: 1024px) 100vw, 50vw"
                className="object-cover"
                unoptimized
              />

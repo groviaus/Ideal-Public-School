@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import { STOCK_IMAGES } from "@/lib/stockImages"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, User, ArrowLeft } from "lucide-react"
 import Link from "next/link"
@@ -26,14 +27,16 @@ const NewsDetail = ({ news }) => {
               src={news.image}
               alt={news.title}
               fill
+              sizes="(max-width: 1024px) 100vw, 896px"
               className="object-cover"
               unoptimized
             />
           ) : (
             <Image
-              src="https://source.unsplash.com/1200x800/?school,news,event"
+              src={STOCK_IMAGES.newsHeroFallback}
               alt={news.title}
               fill
+              sizes="(max-width: 1024px) 100vw, 896px"
               className="object-cover"
               unoptimized
             />

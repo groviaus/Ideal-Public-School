@@ -1,3 +1,4 @@
+import Image from "next/image"
 import SectionWrapper from "@/components/SectionWrapper"
 import { Trophy, Star, Medal } from "lucide-react"
 
@@ -9,6 +10,29 @@ const Achievements = () => {
         <p className="mt-4 text-lg text-slate-300">
           Celebrating the outstanding achievements of our students and school.
         </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-12">
+        <div className="relative aspect-video rounded-2xl overflow-hidden border border-slate-700 shadow-lg">
+          <Image
+            src="/images/award-ceremony-group-banner.jpeg"
+            alt="Students and staff at an award ceremony at Ideal Public School"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            unoptimized
+          />
+        </div>
+        <div className="relative aspect-video rounded-2xl overflow-hidden border border-slate-700 shadow-lg">
+          <Image
+            src="/images/trophy-presentation-boy-uniform.jpeg"
+            alt="Student receiving a trophy during a school ceremony"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            unoptimized
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">

@@ -9,43 +9,43 @@ const Facilities = () => {
       title: "27 Smart Classrooms",
       description: "Spacious and well-equipped classrooms spread across our 2-acre campus for an optimal learning environment.",
       icon: <Library className="h-8 w-8 text-blue-500" />,
-      image: "https://source.unsplash.com/800x500/?classroom,school,learning"
+      image: "/images/classroom-students-windows-fans.jpeg"
     },
     {
       title: "Physics Lab",
       description: "Fully equipped Physics laboratory for hands-on experiential learning and experiments.",
       icon: <FlaskConical className="h-8 w-8 text-green-500" />,
-      image: "https://source.unsplash.com/800x500/?physics,laboratory,experiment"
+      image: "/images/classroom-teacher-blackboard.jpeg"
     },
     {
       title: "Chemistry Lab",
       description: "Modern Chemistry lab with all essential apparatus and safety equipment for practical learning.",
       icon: <FlaskConical className="h-8 w-8 text-purple-500" />,
-      image: "https://source.unsplash.com/800x500/?chemistry,laboratory,science"
+      image: "/images/classroom-aerial-students-working.jpeg"
     },
     {
       title: "Biology Lab",
       description: "Well-stocked Biology lab with microscopes and specimens for in-depth study of life sciences.",
       icon: <FlaskConical className="h-8 w-8 text-teal-500" />,
-      image: "https://source.unsplash.com/800x500/?biology,laboratory,microscope"
+      image: "/images/classroom-students-with-hijab.jpeg"
     },
     {
       title: "Computer Lab",
       description: "State-of-the-art Computer lab to build digital literacy and programming skills from an early age.",
       icon: <Wifi className="h-8 w-8 text-orange-500" />,
-      image: "https://source.unsplash.com/800x500/?computer,lab,technology"
+      image: "/images/classroom-boys-hands-raised.jpeg"
     },
     {
       title: "Library",
       description: "A well-stocked library with books, journals, and digital resources to nurture a love for reading.",
       icon: <Library className="h-8 w-8 text-red-500" />,
-      image: "https://source.unsplash.com/800x500/?library,books,reading"
+      image: "/images/classroom-students-alternate-angle.jpeg"
     },
     {
       title: "8 School Buses",
       description: "Safe and reliable transport service with 8 school buses covering major routes in and around Siwan.",
       icon: <Bus className="h-8 w-8 text-yellow-500" />,
-      image: "https://source.unsplash.com/800x500/?school,bus,yellow"
+      image: "/images/school-entrance-gate-sign.jpeg"
     }
   ]
 
@@ -67,6 +67,7 @@ const Facilities = () => {
                   src={fac.image}
                   alt={`${fac.title} at Ideal Public School`}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   unoptimized
                 />

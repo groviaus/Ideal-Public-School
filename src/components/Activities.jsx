@@ -1,3 +1,4 @@
+import Image from "next/image"
 import SectionWrapper from "@/components/SectionWrapper"
 import { Music, Palette, Move, Drama } from "lucide-react"
 
@@ -56,11 +57,46 @@ const Activities = () => {
           </div>
           
           <div className="w-full md:w-1/2 grid grid-cols-2 gap-4">
-             {/* Image Placeholders */}
-             <div className="aspect-square rounded-2xl bg-slate-200 w-full flex items-center justify-center text-slate-400 text-xs">Sports Image</div>
-             <div className="aspect-square rounded-2xl bg-slate-200 w-full translate-y-8 flex items-center justify-center text-slate-400 text-xs">Dance Image</div>
-             <div className="aspect-square rounded-2xl bg-slate-200 w-full flex items-center justify-center text-slate-400 text-xs">Art Image</div>
-             <div className="aspect-square rounded-2xl bg-slate-200 w-full translate-y-8 flex items-center justify-center text-slate-400 text-xs">Drama Image</div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-200 shadow-md group">
+              <Image
+                src="/images/trophy-presentation-boy-uniform.jpeg"
+                alt="Sports and recognition at Ideal Public School"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 25vw"
+                unoptimized
+              />
+            </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-200 shadow-md group translate-y-8">
+              <Image
+                src="/images/cultural-event-outdoor-stage.jpeg"
+                alt="Cultural programme on the school stage"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 25vw"
+                unoptimized
+              />
+            </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-200 shadow-md group">
+              <Image
+                src="/images/staff-students-certificate-whiteboard.jpeg"
+                alt="Students celebrating achievement in the classroom"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 25vw"
+                unoptimized
+              />
+            </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-200 shadow-md group translate-y-8">
+              <Image
+                src="/images/student-graduation-speaking-microphone.jpeg"
+                alt="Student speaking at a school event"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 25vw"
+                unoptimized
+              />
+            </div>
           </div>
        </div>
     </SectionWrapper>

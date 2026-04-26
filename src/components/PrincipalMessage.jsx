@@ -1,6 +1,7 @@
 import Image from "next/image"
 import SectionWrapper from "@/components/SectionWrapper"
 import { Quote } from "lucide-react"
+import { principalSectionImage } from "@/lib/schoolPhotos"
 
 const PrincipalMessage = () => {
   return (
@@ -9,14 +10,15 @@ const PrincipalMessage = () => {
           <div className="w-full md:w-1/3">
              <div className="aspect-[3/4] rounded-2xl bg-slate-200 overflow-hidden relative shadow-xl">
                <Image
-                 src="https://source.unsplash.com/600x800/?professional,portrait,education"
-                 alt="The Principal, Ideal Public School"
+                 src={principalSectionImage.src}
+                 alt={principalSectionImage.alt}
                  fill
+                 sizes="(max-width: 768px) 100vw, 33vw"
                  className="object-cover"
                  unoptimized
                />
                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent text-white">
-                  <p className="font-bold text-lg">The Principal</p>
+                  <p className="font-bold text-lg">Our classrooms</p>
                   <p className="text-sm opacity-90">Ideal Public School, Siwan</p>
                </div>
              </div>

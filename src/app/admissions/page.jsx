@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Calendar, FileText, Phone, Mail } from "lucide-react"
+import { admissionsBanner } from "@/lib/schoolPhotos"
 
 export const metadata = {
   title: "Admissions | Ideal Public School",
@@ -168,9 +169,10 @@ export default function AdmissionsPage() {
         <section className="mb-16">
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="https://source.unsplash.com/1200x800/?family,school,admission"
-              alt="Parents and children during admission counseling at Ideal Public School"
+              src={admissionsBanner.src}
+              alt={admissionsBanner.alt}
               fill
+              sizes="(max-width: 1024px) 100vw, 896px"
               className="object-cover"
               unoptimized
             />

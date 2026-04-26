@@ -3,7 +3,9 @@
 import { useState } from "react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { Menu, X, GraduationCap } from "lucide-react"
+import Image from "next/image"
+import { Menu, X } from "lucide-react"
+import { schoolLogo } from "@/lib/schoolPhotos"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -29,9 +31,22 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <GraduationCap className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold tracking-tight text-foreground">
+          <Link href="/" className="flex items-center gap-2 min-w-0">
+            <span
+              className="relative h-9 w-9 shrink-0 overflow-hidden rounded-md border border-slate-200 bg-white"
+              aria-hidden
+            >
+              <Image
+                src={schoolLogo.src}
+                alt=""
+                fill
+                className="object-contain p-0.5"
+                sizes="36px"
+                priority
+                unoptimized
+              />
+            </span>
+            <span className="text-xl font-bold tracking-tight text-foreground truncate">
               Ideal Public School
             </span>
           </Link>

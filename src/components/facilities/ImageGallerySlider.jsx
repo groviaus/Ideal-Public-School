@@ -5,36 +5,40 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { toGalleryItem } from "@/lib/schoolPhotos"
 
 const ImageGallerySlider = ({ images = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  const slides = images.map(toGalleryItem)
+
   const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length)
+    setCurrentIndex((prev) => (prev + 1) % slides.length)
   }
 
   const prevImage = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
+    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
-  if (images.length === 0) return null
+  if (slides.length === 0) return null
 
   return (
     <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md">
       <div className="relative h-full">
-        {images.map((image, index) => (
+        {slides.map((slide, index) => (
           <div
-            key={index}
+            key={slide.src || index}
             className={cn(
               "absolute inset-0 transition-opacity duration-500",
               index === currentIndex ? "opacity-100" : "opacity-0"
             )}
           >
-            {image ? (
+            {slide.src ? (
               <Image
-                src={image}
-                alt={`Facility image ${index + 1} at Ideal Public School`}
+                src={slide.src}
+                alt={slide.alt}
                 fill
+                sizes="(max-width: 1024px) 100vw, 896px"
                 className="object-cover"
                 unoptimized
               />
@@ -47,7 +51,7 @@ const ImageGallerySlider = ({ images = [] }) => {
         ))}
       </div>
       
-      {images.length > 1 && (
+      {slides.length > 1 && (
         <>
           <Button
             variant="ghost"
@@ -67,7 +71,7 @@ const ImageGallerySlider = ({ images = [] }) => {
           </Button>
           
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {images.map((_, index) => (
+            {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}

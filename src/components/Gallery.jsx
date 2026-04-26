@@ -1,34 +1,9 @@
 import Image from "next/image"
 import SectionWrapper from "@/components/SectionWrapper"
+import { homeGalleryMosaic } from "@/lib/schoolPhotos"
 
 const Gallery = () => {
-  const galleryItems = [
-    {
-      image: "https://source.unsplash.com/800x600/?sports,event,competition",
-      alt: "Annual Sports Day at Ideal Public School",
-      large: true
-    },
-    {
-      image: "https://source.unsplash.com/800x600/?science,exhibition,fair",
-      alt: "Science Exhibition showcasing student projects"
-    },
-    {
-      image: "https://source.unsplash.com/800x600/?cultural,performance,dance",
-      alt: "Cultural performance and dance events"
-    },
-    {
-      image: "https://source.unsplash.com/800x600/?art,painting,exhibition",
-      alt: "Art Exhibition with student artwork"
-    },
-    {
-      image: "https://source.unsplash.com/800x600/?music,concert,performance",
-      alt: "Music concert and student performances"
-    },
-    {
-      image: "https://source.unsplash.com/800x600/?field,trip,education",
-      alt: "Educational field trips and outdoor learning"
-    }
-  ]
+  const galleryItems = homeGalleryMosaic
 
   return (
     <SectionWrapper id="gallery" background="light">
@@ -46,6 +21,7 @@ const Gallery = () => {
                src={galleryItems[0].image}
                alt={galleryItems[0].alt}
                fill
+               sizes="(max-width: 768px) 100vw, 50vw"
                className="object-cover group-hover:scale-105 transition-transform duration-500"
                unoptimized
              />
@@ -58,6 +34,7 @@ const Gallery = () => {
                src={item.image}
                alt={item.alt}
                fill
+               sizes="(max-width: 768px) 50vw, 25vw"
                className="object-cover group-hover:scale-105 transition-transform duration-500"
                unoptimized
              />

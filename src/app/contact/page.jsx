@@ -11,6 +11,7 @@ import DepartmentContactCard from "@/components/shared/DepartmentContactCard"
 import FeedbackForm from "@/components/shared/FeedbackForm"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, MapPin, Clock, Bus } from "lucide-react"
+import { contactCampusImage } from "@/lib/schoolPhotos"
 
 export const metadata = {
   title: "Contact Us | Ideal Public School",
@@ -82,9 +83,10 @@ export default function ContactPage() {
           <div className="mb-8">
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="https://source.unsplash.com/1200x800/?school,entrance,building"
-                alt="Ideal Public School entrance and main building"
+                src={contactCampusImage.src}
+                alt={contactCampusImage.alt}
                 fill
+                sizes="(max-width: 1024px) 100vw, 896px"
                 className="object-cover"
                 unoptimized
               />

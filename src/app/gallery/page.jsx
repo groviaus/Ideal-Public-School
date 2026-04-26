@@ -12,6 +12,7 @@ import ImageGrid from "@/components/gallery/ImageGrid"
 import VideoPlayer from "@/components/gallery/VideoPlayer"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
+import { galleryPhotosByCategory } from "@/lib/schoolPhotos"
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("all")
@@ -25,72 +26,7 @@ export default function GalleryPage() {
     { id: "infrastructure", name: "Infrastructure" },
   ]
 
-  // Category-based Unsplash images
-  const categoryImages = {
-    all: [
-      "https://source.unsplash.com/800x600/?school,event,celebration",
-      "https://source.unsplash.com/800x600/?sports,students,competition",
-      "https://source.unsplash.com/800x600/?cultural,performance,students",
-      "https://source.unsplash.com/800x600/?science,project,students",
-      "https://source.unsplash.com/800x600/?school,classroom,learning",
-      "https://source.unsplash.com/800x600/?students,activity,education",
-      "https://source.unsplash.com/800x600/?school,building,architecture",
-      "https://source.unsplash.com/800x600/?education,children,learning",
-      "https://source.unsplash.com/800x600/?school,assembly,students",
-      "https://source.unsplash.com/800x600/?art,painting,students",
-      "https://source.unsplash.com/800x600/?music,performance,students",
-      "https://source.unsplash.com/800x600/?sports,playground,athletics",
-      "https://source.unsplash.com/800x600/?library,books,reading",
-      "https://source.unsplash.com/800x600/?science,laboratory,experiment",
-      "https://source.unsplash.com/800x600/?computer,lab,technology",
-      "https://source.unsplash.com/800x600/?auditorium,hall,stage",
-      "https://source.unsplash.com/800x600/?cafeteria,canteen,dining",
-      "https://source.unsplash.com/800x600/?field,trip,education",
-      "https://source.unsplash.com/800x600/?debate,students,competition",
-      "https://source.unsplash.com/800x600/?cultural,performance,dance",
-      "https://source.unsplash.com/800x600/?art,craft,creative",
-      "https://source.unsplash.com/800x600/?music,concert,performance",
-      "https://source.unsplash.com/800x600/?sports,event,competition",
-      "https://source.unsplash.com/800x600/?school,celebration,event",
-    ],
-    events: [
-      "https://source.unsplash.com/800x600/?school,event,celebration",
-      "https://source.unsplash.com/800x600/?school,assembly,students",
-      "https://source.unsplash.com/800x600/?school,celebration,event",
-    ],
-    sports: [
-      "https://source.unsplash.com/800x600/?sports,students,competition",
-      "https://source.unsplash.com/800x600/?sports,playground,athletics",
-      "https://source.unsplash.com/800x600/?sports,event,competition",
-      "https://source.unsplash.com/800x600/?sports,club,activity",
-    ],
-    cultural: [
-      "https://source.unsplash.com/800x600/?cultural,performance,students",
-      "https://source.unsplash.com/800x600/?cultural,performance,dance",
-      "https://source.unsplash.com/800x600/?music,performance,students",
-      "https://source.unsplash.com/800x600/?music,concert,performance",
-      "https://source.unsplash.com/800x600/?art,painting,students",
-      "https://source.unsplash.com/800x600/?art,craft,creative",
-    ],
-    academic: [
-      "https://source.unsplash.com/800x600/?science,project,students",
-      "https://source.unsplash.com/800x600/?school,classroom,learning",
-      "https://source.unsplash.com/800x600/?library,books,reading",
-      "https://source.unsplash.com/800x600/?science,laboratory,experiment",
-      "https://source.unsplash.com/800x600/?computer,lab,technology",
-      "https://source.unsplash.com/800x600/?debate,students,competition",
-    ],
-    infrastructure: [
-      "https://source.unsplash.com/800x600/?school,building,architecture",
-      "https://source.unsplash.com/800x600/?auditorium,hall,stage",
-      "https://source.unsplash.com/800x600/?cafeteria,canteen,dining",
-      "https://source.unsplash.com/800x600/?classroom,smart,technology",
-    ],
-  }
-
-  const getFilteredImages = () => {
-    return categoryImages[activeCategory] || categoryImages.all
-  }
+  const getFilteredImages = () => galleryPhotosByCategory(activeCategory)
 
   const videos = [
     {
@@ -168,4 +104,3 @@ export default function GalleryPage() {
     </main>
   )
 }
-

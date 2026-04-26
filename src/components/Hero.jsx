@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Download } from "lucide-react"
+import { heroCampus } from "@/lib/schoolPhotos"
 
 const Hero = () => {
   return (
@@ -8,11 +9,12 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://source.unsplash.com/1600x900/?school,campus,building"
-          alt="Ideal Public School campus with modern buildings and green surroundings"
+          src={heroCampus.src}
+          alt={heroCampus.alt}
           fill
           className="object-cover opacity-10"
           priority
+          sizes="100vw"
           unoptimized
         />
       </div>

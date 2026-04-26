@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import { STOCK_IMAGES } from "@/lib/stockImages"
 import { Badge } from "@/components/ui/badge"
 import { Mail, Award } from "lucide-react"
 
@@ -12,9 +13,10 @@ const LeadershipCard = ({ name, designation, department, qualification, experien
           <div className="flex-shrink-0">
             <div className="w-32 h-32 rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-green-100 border-2 border-blue-200 relative">
               <Image
-                src="https://source.unsplash.com/400x400/?professional,educator,portrait"
+                src={STOCK_IMAGES.leadershipPortrait}
                 alt={`${name}, ${designation} at Ideal Public School`}
                 fill
+                sizes="128px"
                 className="object-cover"
                 unoptimized
               />

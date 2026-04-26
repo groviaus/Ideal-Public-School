@@ -23,7 +23,7 @@ export default function AcademicsPage() {
       grade: "Pre-Primary (Nursery - UKG)",
       ageRange: "3-6 years",
       description: "A nurturing environment that focuses on play-based learning, social skills, and foundational literacy and numeracy.",
-      image: "https://source.unsplash.com/800x600/?kindergarten,children,learning",
+      image: "/images/classroom-active-lesson.jpeg",
       features: [
         "Activity-based learning",
         "Creative arts and crafts",
@@ -36,7 +36,7 @@ export default function AcademicsPage() {
       grade: "Primary (Class 1 - 5)",
       ageRange: "6-11 years",
       description: "Building strong academic foundations with emphasis on conceptual understanding and critical thinking.",
-      image: "https://source.unsplash.com/800x600/?primary,school,children",
+      image: "/images/classroom-panoramic-students.jpeg",
       features: [
         "CBSE curriculum",
         "Smart classrooms",
@@ -49,7 +49,7 @@ export default function AcademicsPage() {
       grade: "Middle School (Class 6 - 8)",
       ageRange: "11-14 years",
       description: "Comprehensive education with experiential and discussion-based learning, preparing students for academic excellence.",
-      image: "https://source.unsplash.com/800x600/?teenagers,students,classroom",
+      image: "/images/student-portrait-hijab-classroom.jpeg",
       features: [
         "Structured CBSE syllabus across 10 subjects",
         "Laboratory-based learning (Physics, Chemistry, Biology, Computer)",
