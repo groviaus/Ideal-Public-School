@@ -85,54 +85,180 @@ export default function AcademicsPage() {
     },
   ]
 
-  const calendarEvents = [
+  const academicMilestones = [
     {
       date: "1",
       month: "Apr",
-      title: "Academic Year Begins",
-      description: "New academic session starts",
+      year: "2026",
+      title: "New Academic Session Begins",
+      description: "Classes commence for Pre-Primary to Class 8",
       badge: "Important",
     },
     {
-      date: "15",
-      month: "Apr",
-      title: "First Unit Test",
-      description: "Assessment for all grades",
+      date: "11-16",
+      month: "May",
+      year: "2026",
+      title: "First Unit Test (Periodic Assessment I)",
+      description: "Evaluation for all classes",
+      badge: "Exam",
     },
     {
       date: "1",
-      month: "May",
-      title: "Summer Vacation Begins",
+      month: "Jul",
+      year: "2026",
+      title: "School Reopens after Summer Break",
+      description: "Regular classes resume",
+      badge: "Important",
+    },
+    {
+      date: "14-23",
+      month: "Sep",
+      year: "2026",
+      title: "Half-Yearly Examinations",
+      description: "Mid-term evaluation for all grades",
+      badge: "Exam",
+    },
+    {
+      date: "7-12",
+      month: "Dec",
+      year: "2026",
+      title: "Second Unit Test (Periodic Assessment II)",
+      description: "Pre-winter break assessments",
+      badge: "Exam",
+    },
+    {
+      date: "23",
+      month: "Dec",
+      year: "2026",
+      title: "Annual Day & Winter Celebration",
+      description: "Co-curricular performance day",
+      badge: "Event",
+    },
+    {
+      date: "3",
+      month: "Jan",
+      year: "2027",
+      title: "School Reopens",
+      description: "Classes resume after winter recess",
+      badge: "Important",
+    },
+    {
+      date: "8-19",
+      month: "Mar",
+      year: "2027",
+      title: "Annual Examinations",
+      description: "Final comprehensive assessments for promotion",
+      badge: "Exam",
+    },
+  ]
+
+  const officialHolidays = [
+    {
+      date: "4",
+      month: "Mar",
+      year: "2026",
+      title: "Holi",
       badge: "Holiday",
     },
     {
-      date: "15",
-      month: "Jun",
-      title: "School Reopens",
-      description: "After summer break",
+      date: "21",
+      month: "Mar",
+      year: "2026",
+      title: "Id-ul-Fitr",
+      description: "Subject to sighting of the moon",
+      badge: "Holiday",
     },
     {
-      date: "15",
+      date: "26",
+      month: "Mar",
+      year: "2026",
+      title: "Ram Navami",
+      badge: "Holiday",
+    },
+    {
+      date: "31",
+      month: "Mar",
+      year: "2026",
+      title: "Mahavir Jayanti",
+      badge: "Holiday",
+    },
+    {
+      date: "3",
+      month: "Apr",
+      year: "2026",
+      title: "Good Friday",
+      badge: "Holiday",
+    },
+    {
+      date: "14",
+      month: "Apr",
+      year: "2026",
+      title: "Ambedkar Jayanti / Baisakhi",
+      badge: "Holiday",
+    },
+    {
+      date: "27",
+      month: "May",
+      year: "2026",
+      title: "Id-ul-Adha (Bakra Eid)",
+      description: "Tentative - Subject to moon sighting",
+      badge: "Holiday",
+    },
+    {
+      date: "1-30",
+      month: "Jun",
+      year: "2026",
+      title: "Summer Vacation",
+      description: "Summer break for students and staff",
+      badge: "Vacation",
+    },
+    {
+      date: "26",
+      month: "Jun",
+      year: "2026",
+      title: "Muharram",
+      badge: "Holiday",
+    },
+    {
+      date: "26",
+      month: "Aug",
+      year: "2026",
+      title: "Milad-un-Nabi / Eid-e-Milad",
+      badge: "Holiday",
+    },
+    {
+      date: "4",
       month: "Sep",
-      title: "Half-Yearly Examinations",
-      badge: "Exam",
+      year: "2026",
+      title: "Janmashtami",
+      badge: "Holiday",
     },
     {
       date: "2",
       month: "Oct",
-      title: "Gandhi Jayanti",
-      badge: "Holiday",
-    },
-    {
-      date: "15",
-      month: "Dec",
-      title: "Annual Day Celebration",
-      badge: "Event",
+      year: "2026",
+      title: "Mahatma Gandhi Jayanti",
+      badge: "National Holiday",
     },
     {
       date: "20",
+      month: "Oct",
+      year: "2026",
+      title: "Dussehra",
+      badge: "Holiday",
+    },
+    {
+      date: "8",
+      month: "Nov",
+      year: "2026",
+      title: "Diwali",
+      badge: "Holiday",
+    },
+    {
+      date: "25",
       month: "Dec",
-      title: "Winter Vacation Begins",
+      year: "2026",
+      title: "Christmas",
       badge: "Holiday",
     },
   ]
@@ -315,10 +441,10 @@ export default function AcademicsPage() {
         <section className="mb-16">
           <SectionHeading
             badge="Calendar"
-            title="Academic Calendar"
-            description="Important dates and events for the academic year 2025-26."
+            title="Academic Calendar & Holidays"
+            description="Important milestones and official school holidays for the academic session 2026-27."
           />
-          <CalendarWidget events={calendarEvents} />
+          <CalendarWidget academicMilestones={academicMilestones} officialHolidays={officialHolidays} />
         </section>
 
         {/* Scholastic & Co-scholastic Activities */}
