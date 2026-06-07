@@ -109,7 +109,8 @@ const CalendarWidget = ({ academicMilestones = [], officialHolidays = [] }) => {
             </div>
           )}
         </div>
-        {/*  */}
+        
+        {/* Note */}
         <div className="mt-6 p-4 bg-slate-50/60 rounded-xl border border-slate-100">
           <p className="text-xs text-slate-600 leading-relaxed">
             <strong>Important Note:</strong> Official session schedules and public holidays are aligned with CBSE guidelines and regional government declarations. Islamic holidays are tentative, subject to local moon sightings. Please consult official circulars for verified dates.

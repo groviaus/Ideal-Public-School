@@ -10,7 +10,9 @@ import CalendarWidget from "@/components/academics/CalendarWidget"
 import MethodologyTimeline from "@/components/academics/MethodologyTimeline"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { BookOpen, Users, MessageSquare, Library } from "lucide-react"
+import Link from "next/link"
 
 export const metadata = {
   title: "Academics | Ideal Public School",
@@ -499,6 +501,8 @@ export default function AcademicsPage() {
                 icon: Library,
                 title: "Library",
                 description: "Books, digital resources, and reading programs to support learning",
+                link: "/academics/books",
+                linkLabel: "Prescribed Books List"
               },
               {
                 icon: BookOpen,
@@ -518,19 +522,51 @@ export default function AcademicsPage() {
             ].map((resource, index) => {
               const Icon = resource.icon
               return (
-                <Card key={index} className="shadow-md text-center">
-                  <CardContent className="p-6">
-                    <div className="flex justify-center mb-4">
-                      <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-white" />
+                <Card key={index} className="shadow-md text-center flex flex-col justify-between">
+                  <CardContent className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <div className="flex justify-center mb-4">
+                        <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center">
+                          <Icon className="h-6 w-6 text-white" />
+                        </div>
                       </div>
+                      <h3 className="font-bold text-slate-900 mb-2">{resource.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-4">{resource.description}</p>
                     </div>
-                    <h3 className="font-bold text-slate-900 mb-2">{resource.title}</h3>
-                    <p className="text-sm text-muted-foreground">{resource.description}</p>
+                    {resource.link && (
+                      <Link 
+                        href={resource.link} 
+                        className="text-sm font-semibold text-primary hover:underline hover:text-blue-700 mt-auto inline-flex items-center justify-center gap-1"
+                      >
+                        {resource.linkLabel} &rarr;
+                      </Link>
+                    )}
                   </CardContent>
                 </Card>
               )
             })}
+          </div>
+        </section>
+
+        {/* Books & Syllabus CTA */}
+        <section className="mb-16 bg-gradient-to-br from-blue-600 to-indigo-800 rounded-3xl text-white p-8 md:p-12 shadow-xl relative overflow-hidden">
+          {/* Background Decorative elements */}
+          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-white/5 rounded-full filter blur-2xl pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-emerald-500/10 rounded-full filter blur-2xl pointer-events-none"></div>
+          
+          <div className="relative z-10 max-w-3xl space-y-6">
+            <Badge className="bg-white/10 text-white hover:bg-white/20 border-white/20 px-3 py-1">Session 2026-27</Badge>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Official Prescribed Books & Prices</h2>
+            <p className="text-blue-100 text-lg leading-relaxed">
+              Explore the official list of prescribed textbooks, syllabus sets, and individual pricing for Classes III to VIII. Save or print the official list for easy reference prior to purchasing.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-2">
+              <Link href="/academics/books">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 font-semibold shadow-md cursor-pointer">
+                  View Prescribed Books
+                </Button>
+              </Link>
+            </div>
           </div>
         </section>
 

@@ -30,9 +30,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Quick Links</h3>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#admissions" className="hover:text-white transition-colors">Admissions</a></li>
-              <li><a href="#academics" className="hover:text-white transition-colors">Academics</a></li>
-              <li><a href="#facilities" className="hover:text-white transition-colors">Facilities</a></li>
+              <li><a href="/admissions" className="hover:text-white transition-colors">Admissions</a></li>
+              <li><a href="/academics" className="hover:text-white transition-colors">Academics</a></li>
+              <li><a href="/academics/books" className="hover:text-white transition-colors text-primary font-semibold">Prescribed Books</a></li>
+              <li><a href="/facilities" className="hover:text-white transition-colors">Facilities</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
             </ul>

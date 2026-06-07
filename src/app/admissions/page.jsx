@@ -99,7 +99,7 @@ export default function AdmissionsPage() {
     {
       year: "2025",
       title: "Admission Process Begins",
-      description: "Online registration opens for academic year 2025-26",
+      description: "Online registration opens for academic year 2026-27",
     },
     {
       year: "2025",
@@ -159,9 +159,9 @@ export default function AdmissionsPage() {
       
       <PageHero
         title="Admissions"
-        subtitle="Begin your journey with Ideal Public School. Admissions are now open for the academic year 2025-26."
+        subtitle="Begin your journey with Ideal Public School. Admissions are now open for the academic year 2026-27."
         breadcrumbItems={[{ label: "Admissions", href: "/admissions" }]}
-        badge="Admissions Open for 2025-26"
+        badge="Admissions Open for 2026-27"
       />
 
       <PageWrapper>

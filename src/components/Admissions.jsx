@@ -9,7 +9,7 @@ const Admissions = () => {
       <div className="text-center mb-12 space-y-4">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Admissions</h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-           Join our growing family. Admissions are now open for the academic session 2025-26 for Nursery – Class 8.
+           Join our growing family. Admissions are now open for the academic session 2026-27 for Nursery – Class 8.
         </p>
       </div>
 

@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="flex flex-col items-center space-y-8 text-center">
           <div className="space-y-4 max-w-4xl">
             <div className="inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-800 mb-4">
-              Admissions Open for 2025-26
+              Admissions Open for 2026-27
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-slate-900">
               Where Learning Knows <br className="hidden sm:inline" />
