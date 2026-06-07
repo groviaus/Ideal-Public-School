@@ -24,16 +24,14 @@ import { Input } from "@/components/ui/input"
 
 const bookData = {
   "Class I": {
-    // NOTE: Introductory Science price for Class I was not legible in the sheet — please verify and update.
-    total: 1609,
-    sciencePriceUnverified: true,
+    total: 1969,
     books: [
       { name: "Modern English Reader", subject: "English", price: 250 },
       { name: "Progressive English Grammar", subject: "English", price: 100 },
       { name: "नई उड़ान", subject: "Hindi", price: 250 },
       { name: "नवनीत सरल हिन्दी व्याकरण", subject: "Hindi", price: 120 },
       { name: "APM Mathematics", subject: "Mathematics", price: 250 },
-      { name: "Introductory Science", subject: "Science", price: 0, priceUnverified: true },
+      { name: "Introductory Science", subject: "Science", price: 360 },
       { name: "संस्कृत भारती", subject: "Sanskrit", price: 125 },
       { name: "dot com", subject: "Computer", price: 115 },
       { name: "Oscar G.K.", subject: "GK", price: 149 },
@@ -406,13 +404,7 @@ export default function BooksListClient() {
                     {/* Divider */}
                     <div className="border-t border-slate-50 pt-3 flex items-center justify-between">
                       <span className="text-xs font-semibold text-slate-400">Price</span>
-                      {book.priceUnverified ? (
-                        <span className="text-sm font-bold text-amber-600 flex items-center gap-1">
-                          <span className="text-base">⚠</span> To Be Confirmed
-                        </span>
-                      ) : (
-                        <span className="text-lg font-extrabold text-slate-900">₹{book.price}</span>
-                      )}
+                      <span className="text-lg font-extrabold text-slate-900">₹{book.price}</span>
                     </div>
                   </CardContent>
                 </Card>
