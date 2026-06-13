@@ -4,6 +4,9 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/componen
 import { CheckCircle2, Calendar, FileText } from "lucide-react"
 
 const Admissions = () => {
+  const currentYear = new Date().getFullYear()
+  // Forms open in December of current year, session starts March of next year
+  const formYear = currentYear - 1
   return (
     <SectionWrapper id="admissions" background="light">
       <div className="text-center mb-12 space-y-4">
@@ -73,15 +76,15 @@ const Admissions = () => {
              <div className="space-y-4">
                <div>
                  <p className="font-semibold text-foreground">Forms Available</p>
-                 <p>1st December, 2024</p>
+                 <p>20th December, {formYear}</p>
                </div>
                <div>
                  <p className="font-semibold text-foreground">Last Date to Apply</p>
-                 <p>31st March, 2025</p>
+                 <p>1st Week of April, {currentYear}</p>
                </div>
                <div>
                  <p className="font-semibold text-foreground">Session Starts</p>
-                 <p>April, 2025</p>
+                 <p>25th March, {currentYear}</p>
                </div>
              </div>
           </CardContent>

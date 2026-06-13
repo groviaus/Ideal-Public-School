@@ -41,7 +41,7 @@ export default function Home() {
                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
                     <BadgeCheck className="h-5 w-5 text-blue-600" />
                  </div>
-                 <span className="font-medium text-slate-700">CBSE Affiliated</span>
+                 <span className="font-medium text-slate-700">Safe & Secure Campus</span>
               </div>
               <div className="flex items-center gap-3">
                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">

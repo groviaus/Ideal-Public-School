@@ -7,22 +7,22 @@ const Testimonials = () => {
     // Mock Avatar since I haven't created the component yet, using simple div
   const testimonials = [
     {
-      name: "Mrs. Sarah Thompson",
-      role: "Parent of Grade 5 Student",
-      content: "Ideal Public School has been a blessing for my child. The teachers are incredibly supportive, and the focus on holistic development is evident.",
+      name: "Sahil Siddique",
+      role: "Alumni",
+      content: "Ideal Public School has excellent faculty and subject matter expertise. They offer multiple facilities, a resourceful library, and no extra fees. The school is reasonably priced, with clean facilities and adequate security. The curriculum is relevant and highly specialized. Excellent choice!",
       rating: 5
     },
     {
-      name: "Mr. Rahul Verma",
-      role: "Alumni (Batch of 2015)",
-      content: "The values and discipline I learned here have shaped my career. The school provided me with the perfect foundation for success.",
+      name: "Arman",
+      role: "Alumni",
+      content: "I had a wonderful experience studying at Ideal Public School. The teachers genuinely care about the students' progress and go out of their way to help. The friendly environment and strong focus on academics really prepared me well for higher education.",
       rating: 5
     },
     {
-      name: "Ms. Anjali Gupta",
-      role: "Parent of Grade 8 Student",
-      content: "I appreciate the safe and inclusive environment. The infrastructure is top-notch, and my daughter loves going to school every day.",
-      rating: 4
+      name: "Danish",
+      role: "Alumni",
+      content: "A truly great school in Siwan. The campus is beautiful and they maintain excellent discipline. What impressed me the most looking back is the perfect balance between studies and extracurricular activities that shaped my confidence.",
+      rating: 5
     }
   ]
 
@@ -31,7 +31,7 @@ const Testimonials = () => {
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-900">What People Say</h2>
         <p className="mt-4 text-lg text-muted-foreground">
-          Heartwarming feedback from our parents and alumni.
+          Heartwarming feedback from our alumni.
         </p>
       </div>
 
