@@ -8,10 +8,12 @@ import { Menu, X } from "lucide-react"
 import { schoolLogo } from "@/lib/schoolPhotos"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { useAdmissionForm } from "@/context/AdmissionFormContext"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
+  const { openAdmissionForm } = useAdmissionForm()
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -70,11 +72,9 @@ const Navbar = () => {
                 </Link>
               )
             })}
-            <Link href="/admissions">
-              <Button size="sm" className="ml-4">
-                Apply Now
-              </Button>
-            </Link>
+            <Button size="sm" className="ml-4" onClick={openAdmissionForm}>
+              Apply Now
+            </Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -113,9 +113,9 @@ const Navbar = () => {
               )
             })}
             <div className="mt-4 px-3">
-              <Link href="/admissions">
-                <Button className="w-full">Apply Now</Button>
-              </Link>
+              <Button className="w-full" onClick={() => { setIsOpen(false); openAdmissionForm(); }}>
+                Apply Now
+              </Button>
             </div>
           </div>
         </div>

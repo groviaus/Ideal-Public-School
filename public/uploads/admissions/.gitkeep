@@ -1,0 +1,2 @@
+# This directory stores uploaded admission documents.
+# Each application gets its own subdirectory named by its UUID.

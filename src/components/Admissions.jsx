@@ -1,9 +1,13 @@
+"use client"
+
 import SectionWrapper from "@/components/SectionWrapper"
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card"
 import { CheckCircle2, Calendar, FileText } from "lucide-react"
+import { useAdmissionForm } from "@/context/AdmissionFormContext"
 
 const Admissions = () => {
+  const { openAdmissionForm } = useAdmissionForm()
   const currentYear = new Date().getFullYear()
   // Forms open in December of current year, session starts March of next year
   const formYear = currentYear - 1
@@ -92,7 +96,7 @@ const Admissions = () => {
       </div>
 
       <div className="mt-12 text-center">
-        <Button size="lg" className="w-full sm:w-auto px-8 gap-2">
+        <Button size="lg" className="w-full sm:w-auto px-8 gap-2" onClick={openAdmissionForm}>
            Apply Online Now
            <FileText className="h-4 w-4" />
         </Button>

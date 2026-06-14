@@ -11,6 +11,7 @@ import DocumentChecklist from "@/components/admissions/DocumentChecklist"
 import FeeStructureTable from "@/components/admissions/FeeStructureTable"
 import FAQAccordion from "@/components/admissions/FAQAccordion"
 import Timeline from "@/components/about/Timeline"
+import ApplyOnlineButton from "@/components/admissions/ApplyOnlineButton"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -235,9 +236,7 @@ export default function AdmissionsPage() {
                 Fill out our online admission form to begin the process. Our admission team will 
                 contact you within 24 hours to guide you through the next steps.
               </p>
-              <Button size="lg" className="gap-2">
-                Apply Online <ArrowRight className="h-5 w-5" />
-              </Button>
+              <ApplyOnlineButton />
             </CardContent>
           </Card>
         </section>

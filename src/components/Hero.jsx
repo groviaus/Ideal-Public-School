@@ -1,9 +1,13 @@
+"use client"
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Download } from "lucide-react"
 import { heroCampus } from "@/lib/schoolPhotos"
+import { useAdmissionForm } from "@/context/AdmissionFormContext"
 
 const Hero = () => {
+  const { openAdmissionForm } = useAdmissionForm()
   return (
     <section className="relative overflow-hidden w-full py-20 md:py-32 lg:py-40 bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Background Image */}
@@ -33,7 +37,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button size="lg" className="gap-2 h-12 px-8 text-base shadow-lg shadow-blue-500/20">
+            <Button size="lg" className="gap-2 h-12 px-8 text-base shadow-lg shadow-blue-500/20" onClick={openAdmissionForm}>
               Apply for Admission <ArrowRight className="h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="gap-2 h-12 px-8 text-base border-blue-200 hover:bg-blue-50 text-blue-700">

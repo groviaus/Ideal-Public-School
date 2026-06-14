@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono, Dancing_Script } from "next/font/google";
 import "./globals.css";
+import { AdmissionFormProvider } from "@/context/AdmissionFormContext";
+import AdmissionFormModal from "@/components/admissions/AdmissionFormModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} antialiased`}
       >
-        {children}
+        <AdmissionFormProvider>
+          {children}
+          <AdmissionFormModal />
+        </AdmissionFormProvider>
       </body>
     </html>
   );
