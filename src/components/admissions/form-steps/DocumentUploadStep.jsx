@@ -1,29 +1,43 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { Upload, FileCheck, X } from "lucide-react"
+import { validateFile } from "@/lib/validations"
 
-const IMAGE_TYPES = ["image/jpeg", "image/jpg", "image/png"]
-const DOC_TYPES   = [...IMAGE_TYPES, "application/pdf"]
-const MAX_PHOTO   = 5 * 1024 * 1024
-const MAX_DOC     = 10 * 1024 * 1024
+const MAX_PHOTO   = 2 * 1024 * 1024
+const MAX_DOC     = 5 * 1024 * 1024
 
-function FileField({ label, required, accept, maxSize, value, onChange, error, hint }) {
+function FileField({ name, label, required, accept, maxSize, value, onChange, onBlur, error, hint, type }) {
   const inputRef = useRef()
+  const [localError, setLocalError] = useState("")
 
   const handleFile = (e) => {
     const file = e.target.files?.[0]
+    setLocalError("")
     if (!file) return
+
+    const vError = validateFile(file, type)
+    if (vError) {
+      setLocalError(vError)
+      if (inputRef.current) inputRef.current.value = ""
+      onChange(null)
+      return
+    }
+    
     onChange(file)
+    if (onBlur) onBlur(name)
   }
 
   const clear = (e) => {
     e.stopPropagation()
     onChange(null)
+    setLocalError("")
     if (inputRef.current) inputRef.current.value = ""
+    if (onBlur) onBlur(name)
   }
 
   const sizeLabel = maxSize >= 1024 * 1024 ? `${maxSize / 1024 / 1024} MB` : `${maxSize / 1024} KB`
+  const displayError = localError || error
 
   return (
     <div>
@@ -42,26 +56,27 @@ function FileField({ label, required, accept, maxSize, value, onChange, error, h
         <button
           type="button"
           onClick={() => inputRef.current?.click()}
-          className={`w-full flex flex-col items-center justify-center gap-2 px-4 py-6 border-2 border-dashed rounded-lg text-sm transition hover:border-blue-400 hover:bg-blue-50 ${error ? "border-red-400 bg-red-50" : "border-slate-300"}`}
+          className={`w-full flex flex-col items-center justify-center gap-2 px-4 py-6 border-2 border-dashed rounded-lg text-sm transition hover:border-primary hover:bg-primary/5 ${displayError ? "border-red-400 bg-red-50" : "border-slate-300"}`}
         >
-          <Upload className="h-6 w-6 text-slate-400" />
-          <span className="text-slate-600">Click to upload</span>
+          <Upload className={`h-6 w-6 ${displayError ? "text-red-400" : "text-slate-400"}`} />
+          <span className="text-slate-600 font-medium">Click to upload</span>
           <span className="text-xs text-slate-400">{hint} · Max {sizeLabel}</span>
         </button>
       )}
       <input
+        name={name}
         ref={inputRef}
         type="file"
         accept={accept}
         className="hidden"
         onChange={handleFile}
       />
-      {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
+      {displayError && <p className="mt-1 text-xs text-red-500 font-medium">{displayError}</p>}
     </div>
   )
 }
 
-export default function DocumentUploadStep({ data, onChange, errors }) {
+export default function DocumentUploadStep({ data, onChange, onBlur, errors }) {
   const field = (name, value) => onChange({ ...data, [name]: value })
 
   return (
@@ -70,44 +85,56 @@ export default function DocumentUploadStep({ data, onChange, errors }) {
       <p className="text-sm text-slate-500">Please upload clear, readable copies of all required documents.</p>
 
       <FileField
+        name="docPhoto"
         label="Student Photo"
         required
-        accept="image/jpeg,image/png"
+        accept=".jpg,.jpeg,.png,image/jpeg,image/png"
         maxSize={MAX_PHOTO}
         value={data.docPhoto}
         onChange={v => field("docPhoto", v)}
+        onBlur={onBlur}
         error={errors.docPhoto}
         hint="JPG, PNG"
+        type="photo"
       />
       <FileField
+        name="docBirthCert"
         label="Birth Certificate"
         required
-        accept="application/pdf,image/jpeg,image/png"
+        accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
         maxSize={MAX_DOC}
         value={data.docBirthCert}
         onChange={v => field("docBirthCert", v)}
+        onBlur={onBlur}
         error={errors.docBirthCert}
         hint="PDF, JPG, PNG"
+        type="doc"
       />
       <FileField
+        name="docReportCard"
         label="Previous Report Card / Marksheet"
         required
-        accept="application/pdf,image/jpeg,image/png"
+        accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
         maxSize={MAX_DOC}
         value={data.docReportCard}
         onChange={v => field("docReportCard", v)}
+        onBlur={onBlur}
         error={errors.docReportCard}
         hint="PDF, JPG, PNG"
+        type="doc"
       />
       <FileField
+        name="docTransferCert"
         label="Transfer Certificate"
         required={false}
-        accept="application/pdf,image/jpeg,image/png"
+        accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
         maxSize={MAX_DOC}
         value={data.docTransferCert}
         onChange={v => field("docTransferCert", v)}
+        onBlur={onBlur}
         error={errors.docTransferCert}
         hint="PDF, JPG, PNG"
+        type="doc"
       />
     </div>
   )

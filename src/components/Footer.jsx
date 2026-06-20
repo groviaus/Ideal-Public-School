@@ -59,8 +59,8 @@ const Footer = () => {
           
           <div className="space-y-4">
              <h3 className="text-lg font-bold">Location</h3>
-             <div className="aspect-video w-full rounded-lg bg-slate-800 flex items-center justify-center text-xs text-slate-500 border border-slate-700">
-                Google Map Placeholder
+             <div className="aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-800">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.8405883963997!2d84.3658834!3d26.071465699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992f0d83e054627%3A0xbfcf615ed72647c6!2sIDEAL%20PUBLIC%20SCHOOL!5e0!3m2!1sen!2sin!4v1781934894282!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
              </div>
           </div>
         </div>

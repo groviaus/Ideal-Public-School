@@ -16,7 +16,8 @@ export async function GET(request, { params }) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
   }
   try {
-    const app = await getApplicationById(params.id)
+    const { id } = await params
+    const app = await getApplicationById(id)
     if (!app) return NextResponse.json({ error: "Not found" }, { status: 404 })
     return NextResponse.json({ success: true, application: app })
   } catch (err) {
@@ -30,12 +31,13 @@ export async function PATCH(request, { params }) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
   }
   try {
+    const { id } = await params
     const body = await request.json()
     const VALID_STATUSES = ["New", "Under Review", "Contacted", "Shortlisted", "Approved", "Rejected"]
     if (!VALID_STATUSES.includes(body.status)) {
       return NextResponse.json({ error: "Invalid status" }, { status: 422 })
     }
-    const updated = await updateApplication(params.id, {
+    const updated = await updateApplication(id, {
       status: body.status,
       remarks: (body.remarks || "").substring(0, 2000),
     })
