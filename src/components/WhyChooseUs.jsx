@@ -54,11 +54,12 @@ const WhyChooseUs = () => {
           </div>
         </div>
         <div className="relative">
-          <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-slate-100 relative">
-             {/* Placeholder Image */}
-             <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground">
-                <span className="text-lg font-medium opacity-40">School Life / Happy Students Image</span>
-             </div>
+          <div className="rounded-2xl overflow-hidden shadow-2xl bg-slate-100 relative">
+             <img
+               src="/images/classroom-boys-hands-raised.jpeg"
+               alt="Students actively participating in class at Ideal Public School"
+               className="h-full w-full object-contain"
+             />
              {/* Decorative box */}
              <div className="absolute -bottom-6 -left-6 w-2/3 h-1/3 bg-blue-600 rounded-xl -z-10"></div>
              <div className="absolute -top-6 -right-6 w-1/3 h-1/3 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
